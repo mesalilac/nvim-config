@@ -1,4 +1,5 @@
 require("user.set")
+require("user.remap")
 
 -- " Install vim-plug if not found
 -- if empty(glob('~/.vim/autoload/plug.vim'))
