@@ -1,2 +1,1 @@
-vim.cmd("color Tomorrow-Night")
-
+vim.cmd("color one")
