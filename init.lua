@@ -1,4 +1,5 @@
 require("user.set")
+require("user.packer")
 require("user.remap")
 
 -- " Install vim-plug if not found
