@@ -86,11 +86,11 @@ return require('packer').startup(function(use)
     -- vim dashboard 
     use 'glepnir/dashboard-nvim'
 
-    --  A neovim lua plugin to help easily manage multiple terminal windows 
-    use {
-        "akinsho/toggleterm.nvim", 
-        tag = '*'
-    }
+    -- --  A neovim lua plugin to help easily manage multiple terminal windows 
+    -- use {
+    --     "akinsho/toggleterm.nvim", 
+    --     tag = '*'
+    -- }
 
 -- Colorschemes
     use 'rakr/vim-one'
@@ -102,12 +102,6 @@ return require('packer').startup(function(use)
     use 'bluz71/vim-moonfly-colors'
 end)
 
---call plug#begin('~/.vim/plugged')
-
---Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 --Plug 'reconquest/vim-pythonx'
 --Plug 'yamatsum/nvim-cursorline'
-
---call plug#end()
-
 
