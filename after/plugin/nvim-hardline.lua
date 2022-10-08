@@ -1,5 +1,3 @@
-lua << EOF
-
 require('hardline').setup {
   bufferline = false,  -- enable bufferline
   bufferline_settings = {
@@ -20,6 +18,4 @@ require('hardline').setup {
     {class = 'high', item = require('hardline.parts.filetype').get_item, hide = 60},
     {class = 'mode', item = require('hardline.parts.line').get_item},
   },
-EOF}
-
-EOF
+}
