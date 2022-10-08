@@ -55,6 +55,9 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    --  File Browser extension for telescope.nvim
+    use { "nvim-telescope/telescope-file-browser.nvim" }
+
     -- The fastest Neovim colorizer.
     -- color #ffffff
     use 'norcalli/nvim-colorizer.lua'
