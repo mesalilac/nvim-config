@@ -9,14 +9,14 @@ return require('packer').startup(function(use)
 
 -- My Plugins
 
-    -- Highlight, list and search todo comments in your projects 
+    -- Highlight, list and search todo comments in your projects
     use {
         'folke/todo-comments.nvim',
         requires = {'nvim-lua/plenary.nvim'}
     }
 
-    -- A pretty diagnostics, references, telescope results, quickfix 
-    -- and location list to help you solve all the trouble your code is causing. 
+    -- A pretty diagnostics, references, telescope results, quickfix
+    -- and location list to help you solve all the trouble your code is causing.
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
         requires = {'kyazdani42/nvim-web-devicons'}
     }
 
-    --  A file explorer tree for neovim written in lua 
+    --  A file explorer tree for neovim written in lua
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -37,11 +37,11 @@ return require('packer').startup(function(use)
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
-    -- A Vim plugin which shows git diff markers in the 
-    -- sign column and stages/previews/undoes hunks and partial hunks. 
+    -- A Vim plugin which shows git diff markers in the
+    -- sign column and stages/previews/undoes hunks and partial hunks.
     use 'airblade/vim-gitgutter'
 
-    -- Rainbow Parentheses Improved, shorter code, 
+    -- Rainbow Parentheses Improved, shorter code,
     -- no level limit, smooth and fast, powerful configuration.
     use 'luochen1990/rainbow'
 
@@ -55,23 +55,23 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- The fastest Neovim colorizer. 
+    -- The fastest Neovim colorizer.
     -- color #ffffff
     use 'norcalli/nvim-colorizer.lua'
 
-    -- A simple Neovim statusline 
+    -- A simple Neovim statusline
     use 'ojroques/nvim-hardline'
 
-    -- Multiple cursors plugin for vim/neovim 
+    -- Multiple cursors plugin for vim/neovim
     use {
         'mg979/vim-visual-multi',
         branch = 'master'
     }
 
-    -- commentary.vim: comment stuff out 
+    -- commentary.vim: comment stuff out
     use 'tpope/vim-commentary'
 
-    --  Discord Rich Presence for Neovim 
+    --  Discord Rich Presence for Neovim
     use 'andweeb/presence.nvim'
 
     -- Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers
@@ -80,15 +80,15 @@ return require('packer').startup(function(use)
         branch = 'release'
     }
 
-    -- vim-snipmate default snippets (Previously snipmate-snippets) 
+    -- vim-snipmate default snippets (Previously snipmate-snippets)
     use 'honza/vim-snippets'
 
-    -- vim dashboard 
+    -- vim dashboard
     use 'glepnir/dashboard-nvim'
 
-    -- --  A neovim lua plugin to help easily manage multiple terminal windows 
+    -- --  A neovim lua plugin to help easily manage multiple terminal windows
     -- use {
-    --     "akinsho/toggleterm.nvim", 
+    --     "akinsho/toggleterm.nvim",
     --     tag = '*'
     -- }
 
