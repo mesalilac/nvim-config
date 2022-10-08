@@ -26,8 +26,12 @@ nnoremap("<C-K>", "<C-W>k")
 nnoremap("<C-H>", "<C-W>h")
 nnoremap("<C-L>", "<C-W>l")
 
+-- terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set({ 'n', 't' }, "<C-Tab>", ToggleTerminal)
+
+-- telescope file_browser
+nnoremap("<leader>fb", "<cmd>Telescope file_browser<CR>", { noremap = true })
 
 -- delete word and go to insert mode
 nnoremap("<C-d>", "diwi")
