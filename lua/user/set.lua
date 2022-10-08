@@ -15,7 +15,6 @@ o.ignorecase = true
 o.smartcase = true
 o.noswapfile = true
 o.nobackup = true
-o.undodir = "~/.vim/undodir"
 o.undofile = true
 o.incsearch = true
 o.termguicolors = true
@@ -33,4 +32,5 @@ o.clipboard = "unnamedplus"
 o.updatetime = 100
 
 vim.cmd("syntax on")
+vim.cmd("set undodir=~/.vim/undodir")
 vim.cmd("filetype plugin on")
