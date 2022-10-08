@@ -1,6 +1,6 @@
 o = vim.o
 
-o.tabstop = 4 
+o.tabstop = 4
 o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
@@ -36,3 +36,9 @@ vim.cmd("set undodir=~/.vim/undodir")
 vim.cmd("filetype plugin on")
 
 vim.g.mapleader = " "
+
+-- remove trailing white space
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})
