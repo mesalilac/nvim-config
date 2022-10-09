@@ -1,5 +1,7 @@
 o = vim.o
 
+vim.g.mapleader = " "
+
 o.tabstop = 4
 o.softtabstop = 4
 o.shiftwidth = 4
@@ -30,12 +32,15 @@ o.mouse = "a"
 o.clipboard = "unnamedplus"
 o.updatetime = 100
 o.wrap = false
+o.cursorline = true
+o.cursorcolumn = true
+
+-- Autocompletion
+vim.cmd("set wildmode=longest,list,full")
 
 vim.cmd("syntax on")
 vim.cmd("set undodir=~/.vim/undodir")
 vim.cmd("filetype plugin on")
-
-vim.g.mapleader = " "
 
 -- remove trailing white space
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
