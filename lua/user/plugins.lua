@@ -40,7 +40,7 @@ packer.init({
 	},
 })
 
-return require('packer').startup(function(use)
+return packer.startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
