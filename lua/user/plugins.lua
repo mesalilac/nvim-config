@@ -54,10 +54,10 @@ return packer.startup(function(use)
 
     -- A pretty diagnostics, references, telescope results, quickfix
     -- and location list to help you solve all the trouble your code is causing.
-    use {
-        "folke/trouble.nvim",
-        requires = "kyazdani42/nvim-web-devicons",
-    }
+    -- use {
+    --     "folke/trouble.nvim",
+    --     requires = "kyazdani42/nvim-web-devicons",
+    -- }
 
     -- buffer tabs
     use {
@@ -135,18 +135,19 @@ return packer.startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-nvim-lua'
 
+    use {
+        'saecki/crates.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('crates').setup()
+        end,
+    }
+
     -- lsp
-    use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
-    -- run :LspInstallInfo
-    --      press 'i' on:
-    --                  cssls
-    --                  pyright
-    --                  tsserver
-    --                  jsonls
-    --                  html
-    --                  sumneko_lua
-    --                  rust_analyzer
+    use 'neovim/nvim-lspconfig'
+
+    use 'jose-elias-alvarez/null-ls.nvim'
 
     -- --  A neovim lua plugin to help easily manage multiple terminal windows
     -- use {
