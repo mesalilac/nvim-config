@@ -6,6 +6,8 @@ o.tabstop = 4
 o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
+vim.opt.completeopt = { "menuone", "noselect" }  -- mostly just for cmp
+o.conceallevel = 0                         -- so that `` is visible in markdown files
 o.smartindent = true
 o.exrc = true
 o.hlsearch = false
@@ -20,6 +22,7 @@ o.undofile = true
 o.incsearch = true
 o.termguicolors = true
 o.scrolloff = 8
+o.sidescrolloff = 8
 o.showmode = false
 o.colorcolumn = 80
 o.signcolumn = "yes"
@@ -41,6 +44,8 @@ vim.cmd("set wildmode=longest,list,full")
 vim.cmd("syntax on")
 vim.cmd("set undodir=~/.vim/undodir")
 vim.cmd("filetype plugin on")
+vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.cmd [[set iskeyword+=-]]
 
 -- remove trailing white space
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
