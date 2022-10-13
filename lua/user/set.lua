@@ -8,6 +8,7 @@ o.shiftwidth = 4
 o.expandtab = true
 vim.opt.completeopt = { "menuone", "noselect" }  -- mostly just for cmp
 o.conceallevel = 0                         -- so that `` is visible in markdown files
+vim.opt.guicursor = ""
 o.smartindent = true
 o.exrc = true
 o.hlsearch = false
@@ -46,6 +47,9 @@ vim.cmd("set undodir=~/.vim/undodir")
 vim.cmd("filetype plugin on")
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
+
+-- Don't pass messages to |ins-completion-menu|.
+vim.opt.shortmess:append("c")
 
 -- remove trailing white space
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
