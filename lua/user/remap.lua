@@ -1,5 +1,3 @@
-require("user.term")
-
 local nnoremap = require("user.keymap").nnoremap
 local vnoremap = require("user.keymap").vnoremap
 
@@ -36,10 +34,6 @@ nnoremap("<C-d>", "diwi")
 nnoremap("<C-f>", "<cmd>Format<CR>")
 
 nnoremap("<C-b>", "<cmd>NvimTreeToggle<cr>")
-
--- terminal
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-vim.keymap.set({ "n", "t" }, "<C-t>", ToggleTerminal)
 
 -- romgrk/barbar.nvim
 local barbar_opts = { noremap = true, silent = true }
