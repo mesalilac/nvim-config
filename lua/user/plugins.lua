@@ -157,11 +157,11 @@ return packer.startup(function(use)
 
 	use("jose-elias-alvarez/null-ls.nvim")
 
-	-- --  A neovim lua plugin to help easily manage multiple terminal windows
-	-- use {
-	--      "akinsho/toggleterm.nvim",
-	--      tag = '*'
-	-- }
+	--  A neovim lua plugin to help easily manage multiple terminal windows
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+	})
 
 	-- Colorschemes
 	use("rakr/vim-one")
