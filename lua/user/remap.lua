@@ -36,22 +36,12 @@ nnoremap("<leader>fb", "<cmd>Telescope file_browser<CR>", { noremap = true })
 -- delete word and go to insert mode
 nnoremap("<C-d>", "diwi")
 
+-- format
+nnoremap("<C-f>", "<cmd>Format<CR>")
+
 -- terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set({ 'n', 't' }, "<C-t>", ToggleTerminal)
-
--- folke/trouble.nvim
-nnoremap("<leader>xx", "<cmd>TroubleToggle<cr>", {silent = true, noremap = true})
-
-nnoremap("<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", {silent = true, noremap = true})
-
-nnoremap("<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", {silent = true, noremap = true})
-
-nnoremap("<leader>xl", "<cmd>TroubleToggle loclist<cr>", {silent = true, noremap = true})
-
-nnoremap("<leader>xq", "<cmd>TroubleToggle quickfix<cr>", {silent = true, noremap = true})
-
-nnoremap("gR", "<cmd>TroubleToggle lsp_references<cr>", {silent = true, noremap = true})
 
 -- romgrk/barbar.nvim
 local barbar_opts = { noremap = true, silent = true }

@@ -6,8 +6,8 @@ o.tabstop = 4
 o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
-vim.opt.completeopt = { "menuone", "noselect" }  -- mostly just for cmp
-o.conceallevel = 0                         -- so that `` is visible in markdown files
+vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+o.conceallevel = 0 -- so that `` is visible in markdown files
 vim.o.guicursor = "a:blinkon100" -- make cursor blink
 o.smartindent = true
 o.exrc = true
@@ -45,14 +45,14 @@ vim.cmd("set wildmode=longest,list,full")
 vim.cmd("syntax on")
 vim.cmd("set undodir=~/.vim/undodir")
 vim.cmd("filetype plugin on")
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
+vim.cmd("set whichwrap+=<,>,[,],h,l")
+vim.cmd([[set iskeyword+=-]])
 
 -- Don't pass messages to |ins-completion-menu|.
 vim.opt.shortmess:append("c")
 
 -- remove trailing white space
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = { "*" },
-  command = [[%s/\s\+$//e]],
+	pattern = { "*" },
+	command = [[%s/\s\+$//e]],
 })

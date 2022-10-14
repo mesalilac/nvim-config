@@ -1,6 +1,6 @@
-local scrollbar_status_ok= pcall(require, "scrollbar")
+local scrollbar_status_ok = pcall(require, "scrollbar")
 if not scrollbar_status_ok then
-    return
+	return
 end
 
 vim.cmd([[
