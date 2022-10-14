@@ -102,6 +102,9 @@ return packer.startup(function(use)
     -- A simple Neovim statusline
     use 'ojroques/nvim-hardline'
 
+    -- scrollbar
+    use 'Xuyuanp/scrollbar.nvim'
+
     -- Multiple cursors plugin for vim/neovim
     use {
         'mg979/vim-visual-multi',
