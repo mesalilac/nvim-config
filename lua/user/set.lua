@@ -45,7 +45,10 @@ vim.cmd("set wildmode=longest,list,full")
 vim.cmd("syntax on")
 vim.cmd("set undodir=~/.vim/undodir")
 vim.cmd("filetype plugin on")
-vim.cmd("set whichwrap+=<,>,[,],h,l")
+
+-- go to next/prev after line end
+-- vim.cmd("set whichwrap+=<,>,[,],h,l")
+
 vim.cmd([[set iskeyword+=-]])
 
 -- Don't pass messages to |ins-completion-menu|.
