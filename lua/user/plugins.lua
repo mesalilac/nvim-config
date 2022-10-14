@@ -171,6 +171,8 @@ return packer.startup(function(use)
 	use("gruvbox-community/gruvbox")
 	use("chriskempson/vim-tomorrow-theme")
 	use("bluz71/vim-moonfly-colors")
+    use("folke/tokyonight.nvim")
+    use("Shatur/neovim-ayu")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
