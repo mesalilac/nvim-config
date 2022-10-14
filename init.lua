@@ -17,4 +17,3 @@ require("user.plugin_config.presence-nvim")
 require("user.plugin_config.telescope")
 require("user.plugin_config.todo-comments")
 require("user.plugin_config.gitsigns")
-
