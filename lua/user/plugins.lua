@@ -52,12 +52,12 @@ return packer.startup(function(use)
         requires = {'nvim-lua/plenary.nvim'}
     }
 
-    -- A pretty diagnostics, references, telescope results, quickfix
-    -- and location list to help you solve all the trouble your code is causing.
-    -- use {
-    --     "folke/trouble.nvim",
-    --     requires = "kyazdani42/nvim-web-devicons",
-    -- }
+    -- Nvim Treesitter configurations
+    -- and abstraction layer
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
 
     -- buffer tabs
     use {
@@ -74,13 +74,12 @@ return packer.startup(function(use)
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
-    -- A Vim plugin which shows git diff markers in the
-    -- sign column and stages/previews/undoes hunks and partial hunks.
-    use 'airblade/vim-gitgutter'
+    use {
+        'lewis6991/gitsigns.nvim',
+        -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+    }
 
-    -- Rainbow Parentheses Improved, shorter code,
-    -- no level limit, smooth and fast, powerful configuration.
-    use 'luochen1990/rainbow'
+    use 'p00f/nvim-ts-rainbow'
 
     -- Vim plugin, insert or delete brackets, parens, quotes in pair
     use 'jiangmiao/auto-pairs'
@@ -104,6 +103,9 @@ return packer.startup(function(use)
 
     -- scrollbar
     use 'Xuyuanp/scrollbar.nvim'
+
+    -- Indent guides for Neovim
+    use "lukas-reineke/indent-blankline.nvim"
 
     -- Multiple cursors plugin for vim/neovim
     use {
