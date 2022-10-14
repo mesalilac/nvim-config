@@ -1,4 +1,4 @@
-require('user.term')
+require("user.term")
 
 local nnoremap = require("user.keymap").nnoremap
 local vnoremap = require("user.keymap").vnoremap
@@ -26,10 +26,6 @@ nnoremap("<C-K>", "<C-W>k")
 nnoremap("<C-H>", "<C-W>h")
 nnoremap("<C-L>", "<C-W>l")
 
--- terminal
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-vim.keymap.set({ 'n', 't' }, "<C-Tab>", ToggleTerminal)
-
 -- telescope file_browser
 nnoremap("<leader>fb", "<cmd>Telescope file_browser<CR>", { noremap = true })
 
@@ -39,34 +35,36 @@ nnoremap("<C-d>", "diwi")
 -- format
 nnoremap("<C-f>", "<cmd>Format<CR>")
 
+nnoremap("<C-b>", "<cmd>NvimTreeToggle<cr>")
+
 -- terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-vim.keymap.set({ 'n', 't' }, "<C-t>", ToggleTerminal)
+vim.keymap.set({ "n", "t" }, "<C-t>", ToggleTerminal)
 
 -- romgrk/barbar.nvim
 local barbar_opts = { noremap = true, silent = true }
 
 -- Move to previous/next
-nnoremap('<C-[>', '<Cmd>BufferPrevious<CR>', barbar_opts)
-nnoremap('<C-]>', '<Cmd>BufferNext<CR>', barbar_opts)
+nnoremap("<C-[>", "<Cmd>BufferPrevious<CR>", barbar_opts)
+nnoremap("<C-]>", "<Cmd>BufferNext<CR>", barbar_opts)
 -- Re-order to previous/next
-nnoremap('<C-<>', '<Cmd>BufferMovePrevious<CR>', barbar_opts)
-nnoremap('<C->>', '<Cmd>BufferMoveNext<CR>', barbar_opts)
+nnoremap("<C-<>", "<Cmd>BufferMovePrevious<CR>", barbar_opts)
+nnoremap("<C->>", "<Cmd>BufferMoveNext<CR>", barbar_opts)
 -- Goto buffer in position...
-nnoremap('<C-1>', '<Cmd>BufferGoto 1<CR>', barbar_opts)
-nnoremap('<C-2>', '<Cmd>BufferGoto 2<CR>', barbar_opts)
-nnoremap('<C-3>', '<Cmd>BufferGoto 3<CR>', barbar_opts)
-nnoremap('<C-4>', '<Cmd>BufferGoto 4<CR>', barbar_opts)
-nnoremap('<C-5>', '<Cmd>BufferGoto 5<CR>', barbar_opts)
-nnoremap('<C-6>', '<Cmd>BufferGoto 6<CR>', barbar_opts)
-nnoremap('<C-7>', '<Cmd>BufferGoto 7<CR>', barbar_opts)
-nnoremap('<C-8>', '<Cmd>BufferGoto 8<CR>', barbar_opts)
-nnoremap('<C-9>', '<Cmd>BufferGoto 9<CR>', barbar_opts)
-nnoremap('<C-0>', '<Cmd>BufferLast<CR>', barbar_opts)
+nnoremap("<C-1>", "<Cmd>BufferGoto 1<CR>", barbar_opts)
+nnoremap("<C-2>", "<Cmd>BufferGoto 2<CR>", barbar_opts)
+nnoremap("<C-3>", "<Cmd>BufferGoto 3<CR>", barbar_opts)
+nnoremap("<C-4>", "<Cmd>BufferGoto 4<CR>", barbar_opts)
+nnoremap("<C-5>", "<Cmd>BufferGoto 5<CR>", barbar_opts)
+nnoremap("<C-6>", "<Cmd>BufferGoto 6<CR>", barbar_opts)
+nnoremap("<C-7>", "<Cmd>BufferGoto 7<CR>", barbar_opts)
+nnoremap("<C-8>", "<Cmd>BufferGoto 8<CR>", barbar_opts)
+nnoremap("<C-9>", "<Cmd>BufferGoto 9<CR>", barbar_opts)
+nnoremap("<C-0>", "<Cmd>BufferLast<CR>", barbar_opts)
 -- Pin/unpin buffer
-nnoremap('<C-A-p>', '<Cmd>BufferPin<CR>', barbar_opts)
+nnoremap("<C-A-p>", "<Cmd>BufferPin<CR>", barbar_opts)
 -- Close buffer
-nnoremap('<C-w>', '<Cmd>BufferClose<CR>', barbar_opts)
+nnoremap("<C-w>", "<Cmd>BufferClose<CR>", barbar_opts)
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
@@ -76,12 +74,12 @@ nnoremap('<C-w>', '<Cmd>BufferClose<CR>', barbar_opts)
 --                 :BufferCloseBuffersLeft
 --                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
-nnoremap('<C-p>', '<Cmd>BufferPick<CR>', barbar_opts)
+nnoremap("<C-p>", "<Cmd>BufferPick<CR>", barbar_opts)
 -- Sort automatically by...
-nnoremap('<leader>bb', '<Cmd>BufferOrderByBufferNumber<CR>', barbar_opts)
-nnoremap('<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', barbar_opts)
-nnoremap('<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', barbar_opts)
-nnoremap('<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', barbar_opts)
+nnoremap("<leader>bb", "<Cmd>BufferOrderByBufferNumber<CR>", barbar_opts)
+nnoremap("<leader>bd", "<Cmd>BufferOrderByDirectory<CR>", barbar_opts)
+nnoremap("<leader>bl", "<Cmd>BufferOrderByLanguage<CR>", barbar_opts)
+nnoremap("<leader>bw", "<Cmd>BufferOrderByWindowNumber<CR>", barbar_opts)
 
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
