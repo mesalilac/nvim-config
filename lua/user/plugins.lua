@@ -157,6 +157,8 @@ return packer.startup(function(use)
 
 	use("jose-elias-alvarez/null-ls.nvim")
 
+    use("RRethy/vim-illuminate")
+
 	--  A neovim lua plugin to help easily manage multiple terminal windows
 	use({
 		"akinsho/toggleterm.nvim",

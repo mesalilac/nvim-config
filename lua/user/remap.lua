@@ -24,14 +24,15 @@ nnoremap("<C-K>", "<C-W>k")
 nnoremap("<C-H>", "<C-W>h")
 nnoremap("<C-L>", "<C-W>l")
 
--- telescope file_browser
+-- telescope
 nnoremap("<leader>fb", "<cmd>Telescope file_browser<CR>", { noremap = true })
+nnoremap("<C-f>", "<cmd>Telescope find_files<CR>", { noremap = true })
 
 -- delete word and go to insert mode
 nnoremap("<C-d>", "diwi")
 
 -- format
-nnoremap("<C-f>", "<cmd>Format<CR>")
+nnoremap("fr", "<cmd>Format<CR>")
 
 nnoremap("<C-b>", "<cmd>NvimTreeToggle<cr>")
 
