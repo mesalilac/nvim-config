@@ -4,10 +4,12 @@ local vnoremap = require("user.keymap").vnoremap
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
 
 -- Move line/s up(-) or down(+)
-nnoremap("K", "<cmd>m .-2<CR>==")
-nnoremap("J", "<cmd>m .+1<CR>==")
-vnoremap("K", "<cmd>m '<-2<CR>gv=gv")
-vnoremap("J", "<cmd>m '>+1<CR>gv=gv")
+vim.cmd([[
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+]])
 
 --" Write buffer with Ctrl+s
 nnoremap("<C-S>", "<cmd>if expand('%') == ''<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>")
