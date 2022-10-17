@@ -176,7 +176,6 @@ return packer.startup(function(use)
 	use("folke/tokyonight.nvim")
 	use("Shatur/neovim-ayu")
 	use("mswift42/vim-themes")
-
 	use("axvr/photon.vim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
