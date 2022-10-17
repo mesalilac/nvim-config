@@ -157,7 +157,7 @@ return packer.startup(function(use)
 
 	use("jose-elias-alvarez/null-ls.nvim")
 
-    use("RRethy/vim-illuminate")
+	use("RRethy/vim-illuminate")
 
 	--  A neovim lua plugin to help easily manage multiple terminal windows
 	use({
@@ -173,8 +173,11 @@ return packer.startup(function(use)
 	use("gruvbox-community/gruvbox")
 	use("chriskempson/vim-tomorrow-theme")
 	use("bluz71/vim-moonfly-colors")
-    use("folke/tokyonight.nvim")
-    use("Shatur/neovim-ayu")
+	use("folke/tokyonight.nvim")
+	use("Shatur/neovim-ayu")
+	use("mswift42/vim-themes")
+
+	use("axvr/photon.vim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
@@ -182,6 +185,3 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
-
---Plug 'reconquest/vim-pythonx'
---Plug 'yamatsum/nvim-cursorline'
