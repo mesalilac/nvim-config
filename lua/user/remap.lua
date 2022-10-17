@@ -17,7 +17,7 @@ nnoremap("<C-S>", "<cmd>if expand('%') == ''<CR>browse confirm w<CR>else<CR>conf
 --" Write buffer and exit with Ctrl+x
 nnoremap("<C-X>", "<cmd>if expand('%') == ''<CR>browse confirm x<CR>else<CR>confirm x<CR>endif<CR>")
 
---" Write buffer and exit with Ctrl+x
+--" Write buffer and exit with Ctrl+q
 nnoremap("<C-Q>", "<cmd>if expand('%') == ''<CR>browse confirm q<CR>else<CR>confirm q<CR>endif<CR>")
 
 --" Window Navigation with Ctrl-[hjkl]
