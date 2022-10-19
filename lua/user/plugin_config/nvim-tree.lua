@@ -2,10 +2,16 @@
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
+local gwidth = vim.api.nvim_list_uis()[1].width
+local gheight = vim.api.nvim_list_uis()[1].height
+local width = 120
+local height = 30
+
 require("nvim-tree").setup({
-	sort_by = "case_sensitive",
+	sort_by = "name",
 	view = {
-		adaptive_size = true,
+		adaptive_size = false,
+		width = 30,
 		mappings = {
 			list = { -- BEGIN_DEFAULT_MAPPINGS
 				{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
@@ -56,9 +62,70 @@ require("nvim-tree").setup({
 				{ key = "bmv", action = "bulk_move" },
 			}, -- END_DEFAULT_MAPPINGS
 		},
+		float = {
+			enable = true,
+			-- quit_on_focus_loss = true,
+			open_win_config = {
+				relative = "editor",
+				width = width,
+				height = height,
+				row = (gheight - height) * 0.4,
+				col = (gwidth - width) * 0.5,
+			},
+		},
 	},
 	renderer = {
 		group_empty = true,
+		indent_width = 2,
+		indent_markers = {
+			enable = true,
+			inline_arrows = true,
+			icons = {
+				corner = "└",
+				edge = "│",
+				item = "│",
+				bottom = "─",
+				none = " ",
+			},
+		},
+		icons = {
+			webdev_colors = true,
+			git_placement = "before",
+			padding = " ",
+			symlink_arrow = " ➛ ",
+			show = {
+				file = true,
+				folder = true,
+				folder_arrow = true,
+				git = true,
+			},
+			glyphs = {
+				default = "",
+				symlink = "",
+				bookmark = "",
+				folder = {
+					arrow_closed = "",
+					arrow_open = "",
+					default = "",
+					open = "",
+					empty = "",
+					empty_open = "",
+					symlink = "",
+					symlink_open = "",
+				},
+				git = {
+					unstaged = "✗",
+					staged = "✓",
+					unmerged = "",
+					renamed = "➜",
+					untracked = "★",
+					deleted = "",
+					ignored = "◌",
+				},
+			},
+		},
+		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+		symlink_destination = true,
 	},
 	filters = {
 		custom = { "^.git$" },
