@@ -128,8 +128,11 @@ return packer.startup(function(use)
 	--     branch = 'release'
 	-- }
 
-	-- vim dashboard
-	use("glepnir/dashboard-nvim")
+    -- a lua powered greeter like vim-startify / dashboard-nvim
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+    }
 
 	use("L3MON4D3/LuaSnip")
 	use("rafamadriz/friendly-snippets")
