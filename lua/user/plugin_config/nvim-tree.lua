@@ -9,6 +9,17 @@ local height = 30
 
 require("nvim-tree").setup({
 	sort_by = "name",
+	diagnostics = {
+		enable = true,
+		show_on_dirs = false,
+		debounce_delay = 50,
+		icons = {
+			hint = "",
+			info = "",
+			warning = "",
+			error = "",
+		},
+	},
 	view = {
 		adaptive_size = false,
 		width = 30,
