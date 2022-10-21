@@ -1,4 +1,4 @@
-o = vim.o
+local o = vim.o
 
 vim.g.mapleader = " "
 
