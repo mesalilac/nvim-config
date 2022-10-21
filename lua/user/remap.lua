@@ -36,7 +36,7 @@ nnoremap("<C-d>", "diwi")
 -- format
 nnoremap("fr", "<cmd>Format<CR>")
 
-nnoremap("<C-b>", "<cmd>NvimTreeFindFile<cr>")
+nnoremap("<C-b>", "<cmd>NvimTreeFindFileToggle<CR>")
 
 -- romgrk/barbar.nvim
 local barbar_opts = { noremap = true, silent = true }
