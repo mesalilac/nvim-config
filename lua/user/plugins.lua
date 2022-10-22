@@ -128,11 +128,11 @@ return packer.startup(function(use)
 	--     branch = 'release'
 	-- }
 
-    -- a lua powered greeter like vim-startify / dashboard-nvim
-    use {
-        'goolord/alpha-nvim',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-    }
+	-- a lua powered greeter like vim-startify / dashboard-nvim
+	use({
+		"goolord/alpha-nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
 
 	use("L3MON4D3/LuaSnip")
 	use("rafamadriz/friendly-snippets")
@@ -180,6 +180,7 @@ return packer.startup(function(use)
 	use("Shatur/neovim-ayu")
 	use("mswift42/vim-themes")
 	use("axvr/photon.vim")
+	use("Mofiqul/vscode.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
