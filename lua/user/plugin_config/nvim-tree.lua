@@ -4,8 +4,8 @@ vim.g.loaded_netrwPlugin = 1
 
 local gwidth = vim.api.nvim_list_uis()[1].width
 local gheight = vim.api.nvim_list_uis()[1].height
-local width = 120
-local height = 30
+local width =180
+local height = 35
 
 require("nvim-tree").setup({
 	sort_by = "name",
