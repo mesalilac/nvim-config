@@ -21,10 +21,6 @@ toggleterm.setup({
 		width = 200,
 		height = 35,
 		-- winblend = 3,
-		highlights = {
-			border = "Normal",
-			background = "Normal",
-		},
 	},
 })
 
