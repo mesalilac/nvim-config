@@ -84,7 +84,15 @@ return packer.startup(function(use)
 	use("p00f/nvim-ts-rainbow")
 
 	-- Vim plugin, insert or delete brackets, parens, quotes in pair
-	use("jiangmiao/auto-pairs")
+	-- use("jiangmiao/auto-pairs")
+
+	use({
+		"ZhiyuanLck/smart-pairs",
+		event = "InsertEnter",
+		config = function()
+			require("pairs"):setup()
+		end,
+	})
 
 	-- Find, Filter, Preview, Pick. All lua, all the time.
 	use({
