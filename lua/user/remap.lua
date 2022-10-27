@@ -1,7 +1,7 @@
 local nnoremap = require("user.keymap").nnoremap
-local vnoremap = require("user.keymap").vnoremap
 
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
+nnoremap("<leader>o", "<cmd>silent !xdg-open %<cr>", { silent = true }) -- Open current buff with xdg-open
 
 -- Move line/s up(-) or down(+)
 vim.cmd([[
