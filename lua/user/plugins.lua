@@ -176,26 +176,7 @@ return packer.startup(function(use)
 		tag = "*",
 	})
 
-	use({
-		"nvim-neorg/neorg",
-		config = function()
-			require("neorg").setup({
-				-- ... -- check out setup part...
-				load = {
-					["core.defaults"] = {},
-					["core.norg.dirman"] = {
-						config = {
-							workspaces = {
-								youtube = "~/notes/youtube",
-								home = "~/notes/home",
-							},
-						},
-					},
-				},
-			})
-		end,
-		requires = "nvim-lua/plenary.nvim",
-	})
+    use("vimwiki/vimwiki")
 
 	-- Colorschemes
 	use("rakr/vim-one")
