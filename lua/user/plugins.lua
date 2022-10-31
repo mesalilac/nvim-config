@@ -128,7 +128,7 @@ return packer.startup(function(use)
 	use("tpope/vim-commentary")
 
 	--  Discord Rich Presence for Neovim
-	use("andweeb/presence.nvim")
+	-- use("andweeb/presence.nvim")
 
 	-- Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers
 	-- use {
@@ -176,7 +176,7 @@ return packer.startup(function(use)
 		tag = "*",
 	})
 
-    use("vimwiki/vimwiki")
+    -- use("vimwiki/vimwiki")
 
 	-- Colorschemes
 	use("rakr/vim-one")
