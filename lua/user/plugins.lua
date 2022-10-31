@@ -176,8 +176,6 @@ return packer.startup(function(use)
 		tag = "*",
 	})
 
-    -- use("vimwiki/vimwiki")
-
 	-- Colorschemes
 	use("rakr/vim-one")
 	use("gosukiwi/vim-atom-dark")

@@ -22,7 +22,9 @@ require("nvim-tree").setup({
 	},
 	view = {
 		adaptive_size = false,
-		width = 30,
+		width = 35,
+        number = true,
+		relativenumber = true,
 		mappings = {
 			list = { -- BEGIN_DEFAULT_MAPPINGS
 				{ key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
@@ -74,7 +76,7 @@ require("nvim-tree").setup({
 			}, -- END_DEFAULT_MAPPINGS
 		},
 		float = {
-			enable = true,
+			enable = false,
 			-- quit_on_focus_loss = true,
 			open_win_config = {
 				relative = "editor",
@@ -141,5 +143,10 @@ require("nvim-tree").setup({
 	filters = {
 		custom = { "^.git$" },
 		dotfiles = false,
+	},
+    git = {
+		enable = true,
+		ignore = false,
+		timeout = 500,
 	},
 })
