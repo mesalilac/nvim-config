@@ -21,7 +21,7 @@ local servers = {
 	"lemminx", -- XML
 	"yamlls", -- YAML
 	"dockerls", -- Docker
-	"grammarly", -- Grammarly
+	-- "grammarly", -- Grammarly
 }
 
 lsp_installer.setup({
