@@ -189,6 +189,14 @@ return packer.startup(function(use)
 	use("mswift42/vim-themes")
 	use("axvr/photon.vim")
 	use("Mofiqul/vscode.nvim")
+	use("sainnhe/everforest")
+	use("sainnhe/gruvbox-material")
+	use("joshdick/onedark.vim")
+	use("nanotech/jellybeans.vim")
+	use("tomasiser/vim-code-dark")
+	use("sonph/onehalf")
+	use("romgrk/doom-one.vim")
+	use("KabbAmine/yowish.vim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
