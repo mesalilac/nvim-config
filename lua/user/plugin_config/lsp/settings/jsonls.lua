@@ -6,6 +6,13 @@ end
 
 local schemas = {
 	{
+        description = "sumneko_lua Configuration file",
+        fileMatch = {
+            ".luarc.json"
+        },
+        url = "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+	},
+	{
 		description = "TypeScript compiler configuration file",
 		fileMatch = {
 			"tsconfig.json",
