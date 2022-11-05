@@ -197,6 +197,7 @@ return packer.startup(function(use)
 	use("sonph/onehalf")
 	use("romgrk/doom-one.vim")
 	use("KabbAmine/yowish.vim")
+    use("Yazeed1s/oh-lucy.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

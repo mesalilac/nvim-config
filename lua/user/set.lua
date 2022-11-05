@@ -16,7 +16,7 @@ o.exrc = true
 o.hlsearch = false
 o.relativenumber = true
 o.nu = true
-o.guifont = "Iosevka Nerd Font:h14"
+o.guifont = "Iosevka Storm:h14"
 o.ignorecase = true
 o.smartcase = true
 o.swapfile = false
@@ -40,6 +40,13 @@ o.updatetime = 100
 o.wrap = false
 o.cursorline = true
 o.cursorcolumn = true
+
+-- oh-lucy
+o.oh_lucy_italic_comments = true
+o.oh_lucy_italic_keywords = true
+o.oh_lucy_italic_booleans = true
+o.oh_lucy_italic_functions = true
+o.oh_lucy_italic_variables = true
 
 -- Autocompletion
 vim.cmd("set wildmode=longest,list,full")
