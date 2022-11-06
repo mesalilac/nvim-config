@@ -31,7 +31,6 @@ nnoremap("<C-L>", "<C-W>l")
 -- telescope
 nnoremap("<leader>fb", "<cmd>Telescope file_browser<CR>", { noremap = true })
 nnoremap("<leader>lg", "<cmd>Telescope live_grep<CR>", { noremap = true })
-nnoremap("<C-f>", "<cmd>Telescope find_files<CR>", { noremap = true })
 
 -- delete word and go to insert mode
 nnoremap("<C-d>", "diwi")
