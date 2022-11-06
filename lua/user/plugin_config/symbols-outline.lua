@@ -19,7 +19,7 @@ local opts = {
 		goto_location = "<Cr>",
 		focus_location = "o",
 		hover_symbol = "<C-space>",
-		toggle_preview = "K",
+		toggle_preview = "<C-k>",
 		rename_symbol = "r",
 		code_actions = "a",
 		fold = "h",
@@ -60,4 +60,4 @@ local opts = {
 	},
 }
 
-require("symbols-outline").setup()
+require("symbols-outline").setup(opts)
