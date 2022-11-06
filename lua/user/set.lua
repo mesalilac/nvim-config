@@ -41,13 +41,6 @@ o.wrap = false
 o.cursorline = true
 o.cursorcolumn = true
 
--- oh-lucy
-o.oh_lucy_italic_comments = true
-o.oh_lucy_italic_keywords = true
-o.oh_lucy_italic_booleans = true
-o.oh_lucy_italic_functions = true
-o.oh_lucy_italic_variables = true
-
 -- Autocompletion
 vim.cmd("set wildmode=longest,list,full")
 
