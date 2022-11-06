@@ -3,6 +3,7 @@ local nnoremap = require("user.keymap").nnoremap
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
 nnoremap("<leader>o", "<cmd>silent !xdg-open %<cr>", { silent = true }) -- Open current buff with xdg-open
 nnoremap("<C-t>", "<cmd>enew<cr>", { silent = true }) -- open new buff
+nnoremap("<leader>so", "<cmd>SymbolsOutline<cr>", { silent = true }) -- Toggle symbols outline
 
 -- Move line/s up(-) or down(+)
 vim.cmd([[
