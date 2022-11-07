@@ -201,6 +201,7 @@ return packer.startup(function(use)
 	use("KabbAmine/yowish.vim")
 	-- use("Yazeed1s/oh-lucy.nvim")
 	use("~/projects/lua/nvim-plugins/oh-lucy.nvim")
+	use("catppuccin/nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
