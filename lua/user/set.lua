@@ -40,6 +40,7 @@ o.updatetime = 100
 o.wrap = false
 o.cursorline = true
 o.cursorcolumn = true
+o.laststatus=3
 
 -- Autocompletion
 vim.cmd("set wildmode=longest,list,full")
