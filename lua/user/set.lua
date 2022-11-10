@@ -41,6 +41,8 @@ o.wrap = false
 o.cursorline = true
 o.cursorcolumn = true
 o.laststatus=3
+o.foldmethod = 'expr'
+o.foldexpr = 'nvim_treesitter#foldexpr()'
 
 -- Autocompletion
 vim.cmd("set wildmode=longest,list,full")
