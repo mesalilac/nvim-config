@@ -1,5 +1,10 @@
+local status_ok, bufferline = pcall(require, "bufferline")
+if not status_ok then
+	return
+end
+
 -- Set barbar's options
-require("bufferline").setup({
+bufferline.setup({
 	-- Enable/disable animations
 	animation = true,
 
