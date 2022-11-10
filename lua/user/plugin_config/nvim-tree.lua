@@ -1,3 +1,8 @@
+local status_ok, nvim_tree = pcall(require, "nvim-tree")
+if not status_ok then
+	return
+end
+
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
@@ -7,7 +12,7 @@ local gheight = vim.api.nvim_list_uis()[1].height
 local width =180
 local height = 35
 
-require("nvim-tree").setup({
+nvim_tree.setup({
 	sort_by = "name",
 	diagnostics = {
 		enable = true,

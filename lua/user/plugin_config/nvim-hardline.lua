@@ -1,4 +1,9 @@
-require("hardline").setup({
+local status_ok, hardline = pcall(require, "hardline")
+if not status_ok then
+	return
+end
+
+hardline.setup({
 	bufferline = false, -- enable bufferline
 	bufferline_settings = {
 		exclude_terminal = false, -- don't show terminal buffers in bufferline
