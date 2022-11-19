@@ -177,7 +177,7 @@ return packer.startup(function(use)
 	})
 
 	use("simrat39/symbols-outline.nvim")
-	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
+	use("stevearc/dressing.nvim")
 
 	-- Colorschemes
 	use("rakr/vim-one")
