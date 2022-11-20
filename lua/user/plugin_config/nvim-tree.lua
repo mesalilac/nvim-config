@@ -74,7 +74,7 @@ nvim_tree.setup({
 				{ key = "E", action = "expand_all" },
 				{ key = "S", action = "search_node" },
 				{ key = ".", action = "run_file_command" },
-				{ key = "<C-k>", action = "toggle_file_info" },
+				{ key = "gh", action = "toggle_file_info" },
 				{ key = "g?", action = "toggle_help" },
 				{ key = "m", action = "toggle_mark" },
 				{ key = "bmv", action = "bulk_move" },

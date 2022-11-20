@@ -28,6 +28,10 @@ nnoremap("<C-K>", "<C-W>k")
 nnoremap("<C-H>", "<C-W>h")
 nnoremap("<C-L>", "<C-W>l")
 
+-- [[Git
+nnoremap("<leader>gs", "<cmd>Git<CR>")
+-- ]]
+
 -- telescope
 nnoremap("<leader>fb", "<cmd>Telescope file_browser<CR>", { noremap = true })
 nnoremap("<leader>lg", "<cmd>Telescope live_grep<CR>", { noremap = true })
