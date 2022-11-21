@@ -185,6 +185,7 @@ return packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
+    use("ThePrimeagen/git-worktree.nvim")
 
 	-- Colorschemes
 	use("rakr/vim-one")
