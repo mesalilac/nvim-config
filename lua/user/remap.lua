@@ -5,6 +5,10 @@ nnoremap("<leader>o", "<cmd>silent !xdg-open %<cr>", { silent = true }) -- Open 
 nnoremap("<C-t>", "<cmd>enew<cr>", { silent = true }) -- open new buff
 nnoremap("<leader>so", "<cmd>SymbolsOutline<cr>", { silent = true }) -- Toggle symbols outline
 
+-- git worktree plugin remaps
+nnoremap("<leader>ws", "<CMD>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
+nnoremap("<leader>wc", "<CMD>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
+
 -- Move line/s up(-) or down(+)
 vim.cmd([[
 nnoremap K :m .-2<CR>==
