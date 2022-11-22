@@ -1,21 +1,18 @@
--- require plugins
-require("user.plugin_config.barbar")
-require("user.plugin_config.cmp")
-require("user.plugin_config.lsp")
-require("user.plugin_config.alpha")
-require("user.plugin_config.nvim-colorizer")
-require("user.plugin_config.nvim-hardline")
-require("user.plugin_config.scrollbar")
-require("user.plugin_config.indent-blankline")
-require("user.plugin_config.treesitter")
-require("user.plugin_config.nvim-tree")
--- require("user.plugin_config.presence-nvim")
-require("user.plugin_config.telescope")
-require("user.plugin_config.todo-comments")
-require("user.plugin_config.gitsigns")
-require("user.plugin_config.toggleterm")
-require("user.plugin_config.luasnip")
-require("user.plugin_config.symbols-outline")
-require("user.plugin_config.markdown-preview-nvim")
-require("user.plugin_config.git-worktree-nvim")
-require("user.plugin_config.bookmarks-nvim")
+-- Loop lua/user/plugin_config/ and require files/dirs
+-- depth is 1
+for _, file in ipairs(vim.fn.readdir(vim.fn.stdpath('config')..'/lua/user/plugin_config/')) do
+    -- skip this file
+    if file == "init.lua" then
+        goto continue
+    end
+
+    -- remove file extension if found
+    if file:match("(.+)%..+$") then
+        file = file:match("(.+)%..+$")
+    end
+
+    require('user.plugin_config.'..file)
+
+    ::continue::
+end
+
