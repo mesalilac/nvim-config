@@ -191,8 +191,10 @@ return packer.startup(function(use)
 	-- 	branch = "main",
 	-- 	requires = { "kyazdani42/nvim-web-devicons" },
 	-- })
-    use("~/projects/lua/nvim-plugins/bookmarks.nvim")
-
+	use({
+		"~/projects/lua/nvim-plugins/bookmarks.nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
 
 	-- Colorschemes
 	use("rakr/vim-one")
