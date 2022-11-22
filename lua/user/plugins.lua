@@ -185,7 +185,14 @@ return packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-    use("ThePrimeagen/git-worktree.nvim")
+	use("ThePrimeagen/git-worktree.nvim")
+	-- use({
+	-- 	"crusj/bookmarks.nvim",
+	-- 	branch = "main",
+	-- 	requires = { "kyazdani42/nvim-web-devicons" },
+	-- })
+    use("~/projects/lua/nvim-plugins/bookmarks.nvim")
+
 
 	-- Colorschemes
 	use("rakr/vim-one")
