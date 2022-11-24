@@ -9,13 +9,16 @@ toggleterm.setup({
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,
-	shading_factor = 2,
-	start_in_insert = true,
+	shading_factor = 1,
 	insert_mappings = true,
 	persist_size = true,
-	direction = "float",
+	direction = "tab",
+	-- direction = "float",
 	close_on_exit = true,
 	shell = vim.o.shell,
+    on_open = function()
+        vim.cmd("startinsert!")
+    end,
 	float_opts = {
 		border = "curved",
 		width = 200,
