@@ -9,4 +9,4 @@ vim.g.codedark_italics=1
 -- Make the background transparent
 -- vim.g.codedark_transparent=1
 
-vim.cmd("color codedark")
+vim.cmd("color darkcode")
