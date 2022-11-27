@@ -186,13 +186,8 @@ return packer.startup(function(use)
 		end,
 	})
 	use("ThePrimeagen/git-worktree.nvim")
-	-- use({
-	-- 	"crusj/bookmarks.nvim",
-	-- 	branch = "main",
-	-- 	requires = { "kyazdani42/nvim-web-devicons" },
-	-- })
 	use({
-		"~/projects/lua/nvim-plugins/bookmarks.nvim",
+		"crusj/bookmarks.nvim",
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
@@ -218,7 +213,7 @@ return packer.startup(function(use)
 	use("KabbAmine/yowish.vim")
 	use("Yazeed1s/oh-lucy.nvim")
     use("Mofiqul/vscode.nvim")
-    use("Senpai-10/darkcode.nvim")
+    use("~/projects/dev/lua/darkcode.nvim")
 	-- use("~/projects/lua/nvim-plugins/oh-lucy.nvim")
 	use("catppuccin/nvim")
 
