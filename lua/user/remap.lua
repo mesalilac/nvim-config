@@ -21,7 +21,7 @@ vnoremap J :m '>+1<CR>gv=gv
 nnoremap("<C-S>", "<cmd>if expand('%') == ''<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>")
 
 --" Write buffer and exit with Ctrl+x
-nnoremap("<C-X>", "<cmd>if expand('%') == ''<CR>browse confirm x<CR>else<CR>confirm x<CR>endif<CR>")
+nnoremap("<C-A-X>", "<cmd>if expand('%') == ''<CR>browse confirm x<CR>else<CR>confirm x<CR>endif<CR>")
 
 --" Write buffer and exit with Ctrl+q
 nnoremap("<C-Q>", "<cmd>if expand('%') == ''<CR>browse confirm q<CR>else<CR>confirm q<CR>endif<CR>")
