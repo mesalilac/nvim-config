@@ -44,16 +44,13 @@ return packer.startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 
-	-- My Plugins
-
 	-- Highlight, list and search todo comments in your projects
 	use({
 		"folke/todo-comments.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
 	})
 
-	-- Nvim Treesitter configurations
-	-- and abstraction layer
+	-- Nvim Treesitter configurations and abstraction layer
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
@@ -67,7 +64,7 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
-	--  A file explorer tree for neovim written in lua
+	-- A file explorer tree for neovim written in lua
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
@@ -76,16 +73,15 @@ return packer.startup(function(use)
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 
+    -- Git integration for buffers
 	use({
 		"lewis6991/gitsigns.nvim",
-		-- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
 	})
 
+    -- Rainbow parentheses for neovim using tree-sitter.
 	use("p00f/nvim-ts-rainbow")
 
-	-- Vim plugin, insert or delete brackets, parens, quotes in pair
-	-- use("jiangmiao/auto-pairs")
-
+    -- Ultimate smart pairs written in lua!
 	use({
 		"ZhiyuanLck/smart-pairs",
 		event = "InsertEnter",
@@ -98,7 +94,6 @@ return packer.startup(function(use)
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
-		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
@@ -129,12 +124,6 @@ return packer.startup(function(use)
 
 	--  Discord Rich Presence for Neovim
 	-- use("andweeb/presence.nvim")
-
-	-- Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers
-	-- use {
-	--     'neoclide/coc.nvim',
-	--     branch = 'release'
-	-- }
 
 	-- a lua powered greeter like vim-startify / dashboard-nvim
 	use({
