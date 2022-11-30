@@ -3,6 +3,8 @@ if not status_ok then
 	return
 end
 
+vim.api.nvim_set_hl(0, "bookmarks_virt_text", { fg = "#E06C75" })
+
 bookmarks.setup({
 	keymap = {
 		toggle = "<tab><tab>", -- Toggle bookmarks

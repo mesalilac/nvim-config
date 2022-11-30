@@ -180,6 +180,11 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
+	-- use({
+	-- 	"~/projects/dev/lua/bookmarks.nvim.git/virt-text-hl_group/",
+	-- 	requires = { "kyazdani42/nvim-web-devicons" },
+	-- })
+
 	-- Colorschemes
 	use("rakr/vim-one")
 	use("gosukiwi/vim-atom-dark")
