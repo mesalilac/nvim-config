@@ -73,15 +73,15 @@ return packer.startup(function(use)
 		-- tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 
-    -- Git integration for buffers
+	-- Git integration for buffers
 	use({
 		"lewis6991/gitsigns.nvim",
 	})
 
-    -- Rainbow parentheses for neovim using tree-sitter.
+	-- Rainbow parentheses for neovim using tree-sitter.
 	use("p00f/nvim-ts-rainbow")
 
-    -- Ultimate smart pairs written in lua!
+	-- Ultimate smart pairs written in lua!
 	use({
 		"ZhiyuanLck/smart-pairs",
 		event = "InsertEnter",
@@ -206,8 +206,8 @@ return packer.startup(function(use)
 	use("romgrk/doom-one.vim")
 	use("KabbAmine/yowish.vim")
 	use("Yazeed1s/oh-lucy.nvim")
-    use("Mofiqul/vscode.nvim")
-    use("~/projects/dev/lua/darkcode.nvim")
+	use("Mofiqul/vscode.nvim")
+	use("~/projects/dev/lua/darkcode.nvim")
 	-- use("~/projects/lua/nvim-plugins/oh-lucy.nvim")
 	use("catppuccin/nvim")
 

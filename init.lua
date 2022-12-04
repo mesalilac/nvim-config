@@ -1,7 +1,7 @@
 require("user.set")
 require("user.plugins")
 require("user.remap")
-require("user.color")
+require("user.darkcode")
 
 vim.g.oh_lucy_italic_comments = true
 vim.g.oh_lucy_italic_keywords = true
@@ -10,10 +10,8 @@ vim.g.oh_lucy_italic_function = true
 vim.g.oh_lucy_italic_variables = true
 
 -- Activates italicized comments (make sure your terminal supports italics)
-vim.g.codedark_italics=1
+-- vim.g.codedark_italics=1
 -- Make the background transparent
 -- vim.g.codedark_transparent=1
-
-vim.cmd("color darkcode")
 
 require("user.plugin_config")
