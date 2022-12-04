@@ -1,6 +1,7 @@
 require("user.set")
 require("user.plugins")
 require("user.remap")
+require("user.color")
 
 vim.g.oh_lucy_italic_comments = true
 vim.g.oh_lucy_italic_keywords = true
