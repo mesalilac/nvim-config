@@ -107,9 +107,6 @@ return packer.startup(function(use)
 	-- A simple Neovim statusline
 	use("ojroques/nvim-hardline")
 
-	-- scrollbar
-	use("Xuyuanp/scrollbar.nvim")
-
 	-- Indent guides for Neovim
 	use("lukas-reineke/indent-blankline.nvim")
 
@@ -180,7 +177,12 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
-
+	use({
+		"lewis6991/satellite.nvim",
+		config = function()
+			require("satellite").setup()
+		end,
+	})
 
 	-- Colorschemes
 	use("rakr/vim-one")
