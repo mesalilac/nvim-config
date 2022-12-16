@@ -1,21 +1,39 @@
 local nnoremap = require("user.keymap").nnoremap
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
-nnoremap("<leader>o", "<cmd>silent !xdg-open %<cr>", { silent = true }) -- Open current buff with xdg-open
-nnoremap("<C-t>", "<cmd>enew<cr>", { silent = true }) -- open new buff
-nnoremap("<leader>so", "<cmd>SymbolsOutline<cr>", { silent = true }) -- Toggle symbols outline
+-- paste without overwriting clip board
+vim.keymap.set("x", "<leader>p", '"_dP')
+vim.keymap.set("n", "<leader>d", '"_dP')
+vim.keymap.set("v", "<leader>d", '"_dP')
+
+vim.keymap.set("n", "<leader>x", function()
+	local file = vim.api.nvim_buf_get_name(0)
+
+	vim.ui.input({ prompt = "Make '" .. file .. "' executable? (y/N) " }, function(input)
+		if input == "y" then
+            vim.cmd("silent! !chmod +x %")
+			print(file .. " is now executable!")
+		else
+			print("input: " .. input)
+		end
+	end)
+end, { silent = true })
+
+-- Open current buff with xdg-open
+nnoremap("<leader>o", "<cmd>silent !xdg-open %<cr>", { silent = true })
+
+-- open new buff
+nnoremap("<C-t>", "<cmd>enew<cr>", { silent = true })
+
+-- Toggle symbols outline
+nnoremap("<leader>so", "<cmd>SymbolsOutline<cr>", { silent = true })
 
 -- git worktree plugin remaps
 nnoremap("<leader>ws", "<CMD>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
 nnoremap("<leader>wc", "<CMD>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
 
 -- Move line/s up(-) or down(+)
-vim.cmd([[
-nnoremap K :m .-2<CR>==
-nnoremap J :m .+1<CR>==
-vnoremap K :m '<-2<CR>gv=gv
-vnoremap J :m '>+1<CR>gv=gv
-]])
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 --" Write buffer with Ctrl+s
 nnoremap("<C-S>", "<cmd>if expand('%') == ''<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>")
