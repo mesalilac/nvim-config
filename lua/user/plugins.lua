@@ -163,7 +163,19 @@ return packer.startup(function(use)
 	})
 
 	use("simrat39/symbols-outline.nvim")
-	use("stevearc/dressing.nvim")
+	use({
+		"stevearc/dressing.nvim",
+		event = "BufReadPre",
+		config = function()
+			require("dressing").setup({
+				input = { relative = "editor" },
+				select = {
+					backend = { "telescope", "fzf", "builtin" },
+				},
+			})
+		end,
+		disable = false,
+	})
 	use("tpope/vim-fugitive")
 	use({
 		"iamcco/markdown-preview.nvim",
