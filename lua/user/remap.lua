@@ -12,8 +12,6 @@ vim.keymap.set("n", "<leader>x", function()
 		if input == "y" then
             vim.cmd("silent! !chmod +x %")
 			print(file .. " is now executable!")
-		else
-			print("input: " .. input)
 		end
 	end)
 end, { silent = true })
