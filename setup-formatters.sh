@@ -18,3 +18,6 @@ cargo install stylua
 
 echo "Installing python formatter"
 pip install black
+
+echo "Installing prettier"
+npm install -g prettier
