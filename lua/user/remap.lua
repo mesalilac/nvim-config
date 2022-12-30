@@ -30,6 +30,9 @@ nnoremap("<leader>ws", "<CMD>lua require('telescope').extensions.git_worktree.gi
 nnoremap("<leader>wc", "<CMD>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
 
 -- Move line/s up(-) or down(+)
+vim.keymap.set("n", "K", ":m .-2<CR>==")
+vim.keymap.set("n", "J", ":m .+1<CR>==")
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
