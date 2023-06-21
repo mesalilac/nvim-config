@@ -120,7 +120,7 @@ return packer.startup(function(use)
 	use("tpope/vim-commentary")
 
 	--  Discord Rich Presence for Neovim
-	-- use("andweeb/presence.nvim")
+	use("andweeb/presence.nvim")
 
 	-- a lua powered greeter like vim-startify / dashboard-nvim
 	use({
