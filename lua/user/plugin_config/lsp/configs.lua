@@ -12,7 +12,7 @@ local servers = {
 	"tsserver", -- Typescript/Javascript
 	"jsonls", -- Json
 	"html", -- Html
-	"sumneko_lua", -- Lua
+	-- "lua_ls", -- Lua
 	"rust_analyzer", -- Rust
 	"bashls", -- Bash
 	"marksman", -- Markdown
