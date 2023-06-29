@@ -3,7 +3,7 @@ require("user.plugins")
 require("user.remap")
 -- require("user.darkcode")
 
-vim.cmd("color doom-one")
+vim.cmd("color ayu-mirage")
 
 vim.g.oh_lucy_italic_comments = true
 vim.g.oh_lucy_italic_keywords = true
