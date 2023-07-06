@@ -13,7 +13,6 @@ o.guicursor =
 	"n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 o.smartindent = true
 o.exrc = true
-o.hlsearch = false
 o.relativenumber = true
 o.nu = true
 -- o.guifont = "Iosevka Storm:h14"
@@ -42,8 +41,8 @@ o.wrap = false
 o.cursorline = true
 o.cursorcolumn = true
 o.laststatus = 3
-o.foldmethod = "expr"
-o.foldexpr = "nvim_treesitter#foldexpr()"
+-- o.foldmethod = "expr"
+-- o.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Autocompletion
 vim.cmd("set wildmode=longest,list,full")

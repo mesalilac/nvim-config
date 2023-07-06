@@ -1,9 +1,10 @@
 require("user.set")
 require("user.plugins")
 require("user.remap")
--- require("user.darkcode")
 
-vim.cmd("color ayu-mirage")
+-- require("user.darkcode")
+-- vim.cmd("color ayu-mirage")
+vim.cmd("color tokyonight-moon")
 
 vim.g.oh_lucy_italic_comments = true
 vim.g.oh_lucy_italic_keywords = true
