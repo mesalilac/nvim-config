@@ -110,6 +110,12 @@ end
 nvim_tree.setup({
 	sort_by = "name",
 	on_attach = on_attach,
+	sync_root_with_cwd = true,
+	update_focused_file = {
+		enable = true,
+		update_root = false,
+		ignore_list = {},
+	},
 	diagnostics = {
 		enable = true,
 		show_on_dirs = false,
