@@ -10,7 +10,7 @@ vim.keymap.set("n", "<leader>x", function()
 
 	vim.ui.input({ prompt = "Make '" .. file .. "' executable? (y/N) " }, function(input)
 		if input == "y" then
-            vim.cmd("silent! !chmod +x %")
+			vim.cmd("silent! !chmod +x %")
 			print(file .. " is now executable!")
 		end
 	end)
@@ -56,7 +56,7 @@ nnoremap("<leader>gs", "<cmd>Git<CR>")
 -- ]]
 
 -- telescope
-nnoremap("<leader>fb", "<cmd>Telescope file_browser<CR>", { noremap = true })
+nnoremap("<C-f>", "<cmd>Telescope fd<CR>", { noremap = true })
 nnoremap("<leader>lg", "<cmd>Telescope live_grep<CR>", { noremap = true })
 
 -- delete word and go to insert mode
