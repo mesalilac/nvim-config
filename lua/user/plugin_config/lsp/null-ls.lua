@@ -21,7 +21,7 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.pylint.with({
 			diagnostic_config = { underline = true, virtual_text = true, signs = true },
 			-- --disable=C0111 = missing-module-docstring
-			args = { "--from-stdin", "$FILENAME", "-f", "json", "--disable=C0111" },
+			extra_args = { "--disable", "C0111" },
 			method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
 		}),
 	},
