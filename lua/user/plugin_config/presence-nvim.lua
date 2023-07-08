@@ -7,7 +7,8 @@ end
 
 presence:setup({
 	-- General options
-	auto_update = true, -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
+	-- auto_update = true, -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
+	auto_update = false, -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
 	neovim_image_text = "The One True Text Editor", -- Text displayed when hovered over the Neovim image
 	main_image = "neovim", -- Main image display (either "neovim" or "file")
 	client_id = "793271441293967371", -- Use your own Discord application client id (not recommended)
@@ -28,3 +29,61 @@ presence:setup({
 	workspace_text = "Working on %s", -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
 	line_number_text = "Line %s out of %s", -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
 })
+
+presenceEnabled = true
+
+function PresenceEnable()
+	presenceEnabled = true
+	print("presence enabled")
+	UpdatePresence()
+end
+
+function PresenceDisable()
+	presenceEnabled = false
+	print("presence disabled")
+	UpdatePresence()
+end
+
+function PresenceToggle()
+	presenceEnabled = not presenceEnabled
+	print("presence " .. (presenceEnabled and "enabled" or "disabled"))
+	UpdatePresence()
+end
+
+function UpdatePresence()
+	if presenceEnabled then
+		presence:update()
+	else
+		presence:cancel()
+	end
+end
+
+function SetupCallback()
+	vim.cmd([[
+        augroup presence_toggle
+            autocmd!
+
+            autocmd FocusGained * lua package.loaded.presence:handle_focus_gained()
+            autocmd TextChanged * lua package.loaded.presence:handle_text_changed()
+            autocmd VimLeavePre * lua package.loaded.presence:handle_vim_leave_pre()
+            autocmd WinEnter * lua package.loaded.presence:handle_win_enter()
+            autocmd WinLeave * lua package.loaded.presence:handle_win_leave()
+            autocmd BufEnter * lua package.loaded.presence:handle_buf_enter()
+            autocmd BufAdd * lua package.loaded.presence:handle_buf_add()
+
+        augroup END
+    ]])
+end
+
+SetupCallback()
+
+-- Optional Key binds
+vim.keymap.set("n", "<leader>die", function()
+	PresenceEnable()
+end)
+vim.keymap.set("n", "<leader>did", function()
+	PresenceDisable()
+end)
+vim.keymap.set("n", "<leader>dit", function()
+	PresenceToggle()
+end)
