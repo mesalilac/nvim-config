@@ -29,14 +29,14 @@ bufferline.setup({
 	-- Enable/disable icons
 	-- if set to 'numbers', will show buffer index in the tabline
 	-- if set to 'both', will show buffer index and icons in the tabline
-    -- icons = {
-    --     filetype = { enabled = true },
-    --     separator.left = "▎",
-    --     inactive.separator.left = "▎",
-    --     modified.button = "●",
-    --     button = "",
-    --     pinned.button = "車",
-    -- },
+	-- icons = {
+	--     filetype = { enabled = true },
+	--     separator.left = "▎",
+	--     inactive.separator.left = "▎",
+	--     modified.button = "●",
+	--     button = "",
+	--     pinned.button = "車",
+	-- },
 
 	-- If set, the icon color will follow its corresponding buffer
 	-- highlight group. By default, the Buffer*Icon group is linked to the
