@@ -17,7 +17,7 @@ echo "Installing lua formatter"
 cargo install stylua
 
 echo "Installing python formatter"
-sudo pacman -S black
+sudo pacman -S python-black
 
 echo "Installing python linter"
 sudo pacman -S python-pylint
