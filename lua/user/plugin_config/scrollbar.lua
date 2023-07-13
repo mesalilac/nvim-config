@@ -3,7 +3,7 @@ if not scrollbar_status_ok then
 	return
 end
 
-local colors = require("tokyonight.colors").moon()
+local colors = require("vscode.colors")
 
 scrollbar.setup({
 	show = true,
@@ -89,7 +89,7 @@ scrollbar.setup({
 			text = "│",
 			priority = 7,
 			gui = nil,
-			color = colors.git.add,
+			color = colors.vscGitAdded,
 			cterm = nil,
 			color_nr = nil, -- cterm
 			highlight = "GitSignsAdd",
@@ -98,7 +98,7 @@ scrollbar.setup({
 			text = "│",
 			priority = 7,
 			gui = nil,
-			color = colors.git.change,
+			color = colors.vscGitModified,
 			cterm = nil,
 			color_nr = nil, -- cterm
 			highlight = "GitSignsChange",
@@ -107,7 +107,7 @@ scrollbar.setup({
 			text = "▁",
 			priority = 7,
 			gui = nil,
-			color = colors.git.delete,
+			color = colors.vscGitDeleted,
 			cterm = nil,
 			color_nr = nil, -- cterm
 			highlight = "GitSignsDelete",

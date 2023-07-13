@@ -17,4 +17,5 @@ require("user.remap")
 
 require("user.plugin_config")
 
-vim.cmd("color tokyonight-moon")
+-- vim.cmd("color tokyonight-moon")
+vim.cmd("color vscode")
