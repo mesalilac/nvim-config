@@ -17,3 +17,8 @@ treesitter_context.setup({
 	zindex = 20, -- The Z-index of the context window
 	on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
 })
+
+-- Jumping to context (upwards)
+vim.keymap.set("n", "[c", function()
+	require("treesitter-context").go_to_context()
+end, { silent = true })

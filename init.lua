@@ -19,3 +19,5 @@ require("user.plugin_config")
 
 -- vim.cmd("color tokyonight-moon")
 vim.cmd("color vscode")
+
+vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey")
