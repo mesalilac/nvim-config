@@ -176,6 +176,7 @@ return packer.startup(function(use)
 		end,
 		disable = false,
 	})
+	use("nvim-treesitter/nvim-treesitter-context")
 	use("tpope/vim-fugitive")
 	use({
 		"iamcco/markdown-preview.nvim",
