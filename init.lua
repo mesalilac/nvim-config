@@ -15,9 +15,8 @@ require("user.remap")
 -- Make the background transparent
 -- vim.g.codedark_transparent=1
 
-require("user.plugin_config")
-
--- vim.cmd("color tokyonight-moon")
 vim.cmd("color vscode")
+
+require("user.plugin_config")
 
 vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey")
