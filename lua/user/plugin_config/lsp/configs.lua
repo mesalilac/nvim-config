@@ -15,7 +15,6 @@ local servers = {
 	-- "lua_ls", -- Lua
 	"rust_analyzer", -- Rust
 	"bashls", -- Bash
-	"marksman", -- Markdown
 	"sqlls", -- SQL
 	"taplo", -- TOML
 	"lemminx", -- XML
