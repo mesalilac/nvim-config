@@ -113,7 +113,6 @@ nnoremap("<leader>bw", "<Cmd>BufferOrderByWindowNumber<CR>", barbar_opts)
 -- :BarbarDisable - very bad command, should never be used
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<c-]>", vim.lsp.buf.definition, keymap_opts)
 vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 vim.keymap.set("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
