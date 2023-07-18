@@ -155,6 +155,7 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 
 	use("RRethy/vim-illuminate")
+	use("simrat39/rust-tools.nvim")
 
 	--  A neovim lua plugin to help easily manage multiple terminal windows
 	use({

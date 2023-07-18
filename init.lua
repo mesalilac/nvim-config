@@ -1,6 +1,5 @@
 require("user.set")
 require("user.plugins")
-require("user.remap")
 
 -- require("user.darkcode")
 
@@ -18,5 +17,6 @@ require("user.remap")
 vim.cmd("color vscode")
 
 require("user.plugin_config")
+require("user.remap")
 
 vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey")
