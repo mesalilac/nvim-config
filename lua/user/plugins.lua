@@ -50,6 +50,8 @@ return packer.startup(function(use)
 		requires = { "nvim-lua/plenary.nvim" },
 	})
 
+	use("aserebryakov/vim-todo-lists")
+
 	-- Nvim Treesitter configurations and abstraction layer
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -77,9 +79,6 @@ return packer.startup(function(use)
 	use({
 		"lewis6991/gitsigns.nvim",
 	})
-
-	-- Rainbow parentheses for neovim using tree-sitter.
-	use("p00f/nvim-ts-rainbow")
 
 	-- Ultimate smart pairs written in lua!
 	use({
@@ -120,7 +119,7 @@ return packer.startup(function(use)
 	use("tpope/vim-commentary")
 
 	--  Discord Rich Presence for Neovim
-	use("andweeb/presence.nvim")
+	-- use("andweeb/presence.nvim")
 
 	-- a lua powered greeter like vim-startify / dashboard-nvim
 	use({
