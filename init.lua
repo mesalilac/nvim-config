@@ -14,7 +14,8 @@ require("user.plugins")
 -- Make the background transparent
 -- vim.g.codedark_transparent=1
 
-vim.cmd("color vscode")
+-- vim.cmd("color vscode")
+vim.cmd("color gruvbox-material")
 
 require("user.plugin_config")
 require("user.remap")
