@@ -50,8 +50,6 @@ return packer.startup(function(use)
 		requires = { "nvim-lua/plenary.nvim" },
 	})
 
-	use("aserebryakov/vim-todo-lists")
-
 	-- Nvim Treesitter configurations and abstraction layer
 	use({
 		"nvim-treesitter/nvim-treesitter",
