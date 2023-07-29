@@ -18,12 +18,6 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.rustfmt,
 		diagnostics.zsh,
-		null_ls.builtins.diagnostics.pylint.with({
-			diagnostic_config = { underline = true, virtual_text = true, signs = true },
-			-- --disable=C0111 = missing-module-docstring
-			extra_args = { "--disable", "C0111" },
-			method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
-		}),
 	},
 
 	-- format on save

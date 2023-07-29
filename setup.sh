@@ -12,9 +12,6 @@ cargo install stylua
 echo "Installing python formatter"
 sudo apt-get install black
 
-echo "Installing python linter"
-sudo apt-get install pylint
-
 echo "Installing prettier"
 yarn global add prettier
 
