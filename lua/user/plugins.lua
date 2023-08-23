@@ -97,9 +97,8 @@ return packer.startup(function(use)
 	--  File Browser extension for telescope.nvim
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 
-	-- The fastest Neovim colorizer.
-	-- color #ffffff
-	use("norcalli/nvim-colorizer.lua")
+	-- Color picker
+	use("uga-rosa/ccc.nvim")
 
 	-- A simple Neovim statusline
 	use("ojroques/nvim-hardline")
