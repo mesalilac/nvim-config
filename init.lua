@@ -15,7 +15,7 @@ require("user.plugins")
 -- vim.g.codedark_transparent=1
 
 -- vim.cmd("color gruvbox-material")
-vim.cmd("color tokyonight")
+vim.cmd("color catppuccin-macchiato")
 
 require("user.plugin_config")
 require("user.remap")
