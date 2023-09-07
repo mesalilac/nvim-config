@@ -191,7 +191,7 @@ return packer.startup(function(use)
 	use("petertriho/nvim-scrollbar")
 
 	-- Colorschemes
-	use("gruvbox-community/gruvbox")
+	use({ "ellisonleao/gruvbox.nvim" })
 	use("chriskempson/vim-tomorrow-theme")
 	use("folke/tokyonight.nvim")
 	use("sainnhe/everforest")

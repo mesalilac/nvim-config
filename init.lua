@@ -15,10 +15,12 @@ require("user.plugins")
 -- vim.g.codedark_transparent=1
 
 -- vim.cmd("color gruvbox-material")
-vim.cmd("color catppuccin-macchiato")
+-- vim.cmd("color catppuccin-macchiato")
 
 require("user.plugin_config")
 require("user.remap")
+
+vim.cmd("color gruvbox")
 
 vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey")
 vim.api.nvim_set_hl(0, "FocusedSymbol", { fg = "#111111", bg = "#D7BA7D" })
