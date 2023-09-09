@@ -21,8 +21,7 @@ gruvbox.setup({
 	inverse = false, -- invert background for search, diffs, statuslines and errors
 	contrast = "hard", -- can be "hard", "soft" or empty string
 	palette_overrides = {
-		-- dark0_hard = "#1E2021",
-		dark0_hard = "#000000",
+		dark0_hard = "#1E2021",
 		dark0 = "#282828",
 		dark0_soft = "#32302f",
 		dark1 = "#3c3836",
