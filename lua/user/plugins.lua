@@ -189,6 +189,7 @@ return packer.startup(function(use)
 
 	use("kevinhwang91/nvim-hlslens")
 	use("petertriho/nvim-scrollbar")
+	use("folke/trouble.nvim")
 
 	-- Colorschemes
 	use({ "ellisonleao/gruvbox.nvim" })
