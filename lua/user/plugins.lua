@@ -201,6 +201,7 @@ return packer.startup(function(use)
 	use("Mofiqul/vscode.nvim")
 	use("olimorris/onedarkpro.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
+	use("marko-cerovac/material.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
