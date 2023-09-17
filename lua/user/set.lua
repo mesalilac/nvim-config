@@ -16,8 +16,8 @@ o.guicursor =
 
 o.smartindent = true
 o.exrc = true
--- o.relativenumber = true -- Add relative line number
--- o.nu = true -- Add line numbers
+o.nu = true -- Add line numbers
+o.relativenumber = true -- Add relative line number
 o.guifont = "Rec Mono SemiCasual:h15"
 o.ignorecase = true
 o.smartcase = true
