@@ -104,7 +104,7 @@ return packer.startup(function(use)
 	use("ojroques/nvim-hardline")
 
 	-- Indent guides for Neovim
-	use("lukas-reineke/indent-blankline.nvim")
+	-- use("lukas-reineke/indent-blankline.nvim")
 
 	-- Multiple cursors plugin for vim/neovim
 	use({
