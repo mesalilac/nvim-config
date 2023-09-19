@@ -4,7 +4,7 @@ require("user.plugins")
 require("user.plugin_config")
 require("user.remap")
 
-vim.cmd("color catppuccin")
+vim.cmd("color tokyodark")
 
 vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey")
 vim.api.nvim_set_hl(0, "FocusedSymbol", { fg = "#111111", bg = "#D7BA7D" })
