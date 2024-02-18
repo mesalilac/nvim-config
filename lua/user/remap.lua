@@ -128,7 +128,7 @@ vim.keymap.set("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded
 vim.keymap.set("n", "gl", '<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>', opts)
 vim.keymap.set("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
 vim.keymap.set("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format{async=true}' ]])
+vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format{async=false}' ]])
 
 vim.keymap.set("n", "<leader>xx", function()
 	require("trouble").open()
