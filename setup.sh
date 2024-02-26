@@ -2,7 +2,7 @@
 
 # This script will download and install
 # all formatters that i use in null-ls.nvim
-# and other stuff
+# and other stuff.
 
 set -e
 
