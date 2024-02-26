@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-# this script will download and install
+# This script will download and install
 # all formatters that i use in null-ls.nvim
 # and other stuff
 
