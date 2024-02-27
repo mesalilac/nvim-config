@@ -90,8 +90,8 @@ return packer.startup(function(use)
 	-- Find, Filter, Preview, Pick. All lua, all the time.
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-		requires = { { "nvim-lua/plenary.nvim" } },
+        tag = "0.1.5",
+        requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
 	--  File Browser extension for telescope.nvim
