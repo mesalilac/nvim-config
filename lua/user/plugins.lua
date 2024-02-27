@@ -204,6 +204,8 @@ return packer.startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("marko-cerovac/material.nvim")
 	use("tiagovla/tokyodark.nvim")
+	use("rebelot/kanagawa.nvim")
+	use("rose-pine/neovim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
