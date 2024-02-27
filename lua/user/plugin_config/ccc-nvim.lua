@@ -67,8 +67,8 @@ ccc.setup({
 		input = true,
 		output = false,
 		pattern = {
-			[picker.css_rgb] = { input.hsl, output.rgb },
-			[picker.css_name] = { input.hsl, output.rgb },
+			[picker.css_rgb] = { input.hsl, output.css_rgb },
+			[picker.css_name] = { input.hsl, output.css_rgb },
 			[picker.hex] = { input.hsl, output.hex },
 			[picker.css_hsl] = { input.hsl, output.css_hsl },
 			[picker.css_hwb] = { input.hwb, output.css_hwb },
