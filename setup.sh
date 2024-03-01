@@ -24,3 +24,4 @@ cargo install ripgrep
 # Install fd for telescope
 cargo install fd-find
 
+sudo apt install shellcheck
