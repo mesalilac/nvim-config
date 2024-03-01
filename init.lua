@@ -4,8 +4,8 @@ require("user.plugins")
 require("user.plugin_config")
 require("user.remap")
 
--- vim.cmd("color gruvbox")
-vim.cmd("color rose-pine-moon")
+vim.cmd("color gruvbox")
+-- vim.cmd("color rose-pine-moon")
 
 vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey")
 vim.api.nvim_set_hl(0, "FocusedSymbol", { fg = "#111111", bg = "#D7BA7D" })
