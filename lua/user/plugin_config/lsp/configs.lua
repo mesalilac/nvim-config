@@ -13,6 +13,7 @@ local servers = {
 	"jsonls", -- Json
 	"html", -- Html
 	-- "lua_ls", -- Lua
+	-- "sumneko_lua",
 	"rust_analyzer", -- Rust
 	"bashls", -- Bash
 	"taplo", -- TOML
