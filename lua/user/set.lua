@@ -65,3 +65,15 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
 	command = [[%s/\s\+$//e]],
 })
+
+-- Fix for autoformat not working with clangd
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+vim.api.nvim_clear_autocmds({ group = augroup })
+vim.api.nvim_create_autocmd("BufWritePre", {
+	group = augroup,
+	callback = function()
+		-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+		-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
+		vim.lsp.buf.format({ async = false })
+	end,
+})
