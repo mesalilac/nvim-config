@@ -190,22 +190,10 @@ return packer.startup(function(use)
 	use("kevinhwang91/nvim-hlslens")
 	use("petertriho/nvim-scrollbar")
 	use("folke/trouble.nvim")
-	use("Exafunction/codeium.vim")
+	-- use("Exafunction/codeium.vim")
 
 	-- Colorschemes
-	use({ "ellisonleao/gruvbox.nvim" })
-	use("chriskempson/vim-tomorrow-theme")
-	use("folke/tokyonight.nvim")
-	use("sainnhe/everforest")
 	use("sainnhe/gruvbox-material")
-	use("~/projects/dev/lua/oh-lucy.nvim")
-	use("Mofiqul/vscode.nvim")
-	use("olimorris/onedarkpro.nvim")
-	use({ "catppuccin/nvim", as = "catppuccin" })
-	use("marko-cerovac/material.nvim")
-	use("tiagovla/tokyodark.nvim")
-	use("rebelot/kanagawa.nvim")
-	use("rose-pine/neovim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
