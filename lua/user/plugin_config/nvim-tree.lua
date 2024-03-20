@@ -9,7 +9,7 @@ vim.g.loaded_netrwPlugin = 1
 
 local gwidth = vim.api.nvim_list_uis()[1].width
 local gheight = vim.api.nvim_list_uis()[1].height
-local width = 180
+local width = 100
 local height = 35
 
 local function on_attach(bufnr)
@@ -130,13 +130,14 @@ nvim_tree.setup({
 	view = {
 		adaptive_size = false,
 		width = 35,
-		number = true,
-		relativenumber = true,
+		-- number = true,
+		-- relativenumber = true,
 		float = {
-			enable = false,
+			enable = true,
 			quit_on_focus_loss = true,
 			open_win_config = {
 				relative = "editor",
+
 				width = width,
 				height = height,
 				row = (gheight - height) * 0.4,
