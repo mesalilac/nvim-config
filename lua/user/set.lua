@@ -10,9 +10,9 @@ vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 o.conceallevel = 0 -- so that `` is visible in markdown files
 
 -- Enable blinking together with different cursor shapes for insert/command mode, and cursor highlighting:
-o.guicursor =
-	"n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
--- o.guicursor = "i:block"
+-- o.guicursor =
+-- 	"n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+o.guicursor = "i:block"
 
 o.smartindent = true
 o.exrc = true
@@ -25,7 +25,6 @@ o.swapfile = false
 o.backup = false
 o.undofile = true
 o.incsearch = true
-o.termguicolors = true
 o.scrolloff = 8
 o.sidescrolloff = 8
 o.showmode = false
@@ -40,10 +39,15 @@ o.clipboard = "unnamedplus"
 o.updatetime = 100
 o.wrap = false
 o.cursorline = true
+o.background = "dark"
 -- o.cursorcolumn = true
 o.laststatus = 3
 -- o.foldmethod = "expr"
 -- o.foldexpr = "nvim_treesitter#foldexpr()"
+
+if vim.fn.has("termguicolors") then
+	o.termguicolors = true
+end
 
 -- Autocompletion
 vim.cmd("set wildmode=longest,list,full")
