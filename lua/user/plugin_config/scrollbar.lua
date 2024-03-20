@@ -3,7 +3,24 @@ if not scrollbar_status_ok then
 	return
 end
 
-local colors = require("vscode.colors")
+-- colors for gruvbox-material
+local colors = {
+	bg_highight = "#e2cca9",
+	comment = "#fefefe",
+	red = "#fb4934",
+	orange = "#fe8019",
+	yellow = "#fabd2f",
+	green = "#b8bb26",
+	aqua = "#8ec07c",
+	blue = "#83a598",
+	purple = "#d3869b",
+	cyan = "#80aa9e",
+	white = "#ffffff",
+}
+
+colors.vscGitAdded = colors.green
+colors.vscGitModified = colors.orange
+colors.vscGitDeleted = colors.red
 
 scrollbar.setup({
 	show = true,
