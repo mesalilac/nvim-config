@@ -134,7 +134,7 @@ nvim_tree.setup({
 		relativenumber = true,
 		float = {
 			enable = false,
-			-- quit_on_focus_loss = true,
+			quit_on_focus_loss = true,
 			open_win_config = {
 				relative = "editor",
 				width = width,
