@@ -130,6 +130,11 @@ vim.keymap.set("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded
 vim.keymap.set("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format{async=false}' ]])
 
+-- Jumping to context (upwards)
+vim.keymap.set("n", "[c", function()
+	require("treesitter-context").go_to_context()
+end, { silent = true })
+
 vim.keymap.set("n", "<leader>xx", function()
 	require("trouble").open()
 end)
