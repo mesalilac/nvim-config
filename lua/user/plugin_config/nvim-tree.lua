@@ -128,12 +128,13 @@ nvim_tree.setup({
 		},
 	},
 	view = {
+		side = "left",
 		adaptive_size = false,
 		width = 35,
 		-- number = true,
 		-- relativenumber = true,
 		float = {
-			enable = true,
+			enable = false,
 			quit_on_focus_loss = true,
 			open_win_config = {
 				relative = "editor",
