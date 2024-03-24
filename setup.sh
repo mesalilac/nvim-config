@@ -26,3 +26,4 @@ cargo install fd-find
 
 yarn global add bash-language-server
 sudo apt install shellcheck
+cargo install --features lsp --locked taplo-cli
