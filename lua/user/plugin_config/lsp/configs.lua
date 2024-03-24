@@ -37,6 +37,8 @@ lsp_installer.setup({
 	},
 })
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- :help lspconfig-all
 for _, server in pairs(servers) do
 	local opts = {
 		on_attach = require("user.plugin_config.lsp.handlers").on_attach,
