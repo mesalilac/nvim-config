@@ -17,8 +17,9 @@ return {
 			workspace = {
 				library = {
 					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+					[vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
 					[vim.fn.stdpath("config") .. "/lua"] = true,
-					["/usr/share/awesome/lib"] = true,
+					[vim.fn.expand("/usr/share/awesome/lib")] = true,
 				},
 			},
 		},
