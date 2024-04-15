@@ -7,12 +7,13 @@ local lspconfig = require("lspconfig")
 
 local servers = {
 	"cssls", -- Css
+	"gopls", -- Golang
 	"clangd", -- C++/C
 	"pyright", -- Python
 	"tsserver", -- Typescript/Javascript
 	"jsonls", -- Json
 	"html", -- Html
-	-- "lua_ls", -- Lua
+	"lua_ls", -- Lua
 	-- "sumneko_lua",
 	"rust_analyzer", -- Rust
 	"bashls", -- Bash
