@@ -21,7 +21,8 @@ g.gruvbox_material_diagnostic_line_highlight = 1
 g.gruvbox_material_diagnostic_virtual_text = "colored"
 g.gruvbox_material_sign_column_background = "none"
 
-vim.cmd("colorscheme gruvbox-material")
+-- vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme tokyonight")
 
 -- FIXME: hi NvimTree NOT WORKING
 vim.cmd([[
