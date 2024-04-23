@@ -10,7 +10,7 @@ vim.g.loaded_netrwPlugin = 1
 local gwidth = vim.api.nvim_list_uis()[1].width
 local gheight = vim.api.nvim_list_uis()[1].height
 local width = 100
-local height = 35
+local height = 30
 
 local function on_attach(bufnr)
 	local api = require("nvim-tree.api")
@@ -111,6 +111,11 @@ nvim_tree.setup({
 	sort_by = "name",
 	on_attach = on_attach,
 	sync_root_with_cwd = true,
+	actions = {
+		open_file = {
+			quit_on_open = true,
+		},
+	},
 	update_focused_file = {
 		enable = true,
 		update_root = false,
@@ -128,21 +133,24 @@ nvim_tree.setup({
 		},
 	},
 	view = {
-		side = "left",
+		side = "right",
 		adaptive_size = false,
 		width = 35,
 		-- number = true,
 		-- relativenumber = true,
 		float = {
 			enable = false,
-			quit_on_focus_loss = true,
+			quit_on_focus_loss = false,
 			open_win_config = {
 				relative = "editor",
+				border = "rounded",
 
 				width = width,
 				height = height,
-				row = (gheight - height) * 0.4,
+				row = (gheight - height) * 0.5,
 				col = (gwidth - width) * 0.5,
+				-- row = (gheight / 2) * 0.4,
+				-- col = (gwidth / 2) * 0.5,
 			},
 		},
 	},
