@@ -115,9 +115,6 @@ return packer.startup(function(use)
 	-- commentary.vim: comment stuff out
 	use("tpope/vim-commentary")
 
-	--  Discord Rich Presence for Neovim
-	-- use("andweeb/presence.nvim")
-
 	-- a lua powered greeter like vim-startify / dashboard-nvim
 	use({
 		"goolord/alpha-nvim",
