@@ -192,6 +192,7 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use("sainnhe/gruvbox-material")
 	use("folke/tokyonight.nvim")
+	use({ "ellisonleao/gruvbox.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
