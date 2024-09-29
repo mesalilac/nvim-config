@@ -10,7 +10,8 @@ local servers = {
 	"gopls", -- Golang
 	"clangd", -- C++/C
 	"pyright", -- Python
-	"tsserver", -- Typescript/Javascript
+	-- "tsserver", -- Typescript/Javascript (tsserver is deprecated)
+	"ts_ls", -- New ts server
 	"jsonls", -- Json
 	"html", -- Html
 	"lua_ls", -- Lua
