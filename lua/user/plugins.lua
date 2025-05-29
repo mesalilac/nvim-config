@@ -145,7 +145,8 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer")
 	use("neovim/nvim-lspconfig")
 
-	use("jose-elias-alvarez/null-ls.nvim")
+	--use("jose-elias-alvarez/null-ls.nvim")
+    use("nvimtools/none-ls.nvim")
 
 	use("RRethy/vim-illuminate")
 	use("simrat39/rust-tools.nvim")

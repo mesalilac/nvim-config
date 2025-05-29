@@ -16,7 +16,7 @@ null_ls.setup({
 		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote", "--semi", "--tab-width=4" } }),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-		formatting.rustfmt,
+		-- formatting.rustfmt,
 		-- formatting.clang_format.with({ extra_args = { "-style={BasedOnStyle: llvm, IndentWidth: 4}" } }),
 		diagnostics.zsh,
 	},
