@@ -146,7 +146,11 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 
 	--use("jose-elias-alvarez/null-ls.nvim")
-    use("nvimtools/none-ls.nvim")
+	use("nvimtools/none-ls.nvim")
+	use("nvimtools/none-ls-extras.nvim")
+
+	use("gbprod/none-ls-shellcheck.nvim")
+	use("gbprod/none-ls-luacheck.nvim")
 
 	use("RRethy/vim-illuminate")
 	use("simrat39/rust-tools.nvim")

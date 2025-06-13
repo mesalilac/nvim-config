@@ -13,9 +13,31 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote", "--semi", "--tab-width=4" } }),
+		-- formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote", "--semi", "--tab-width=4" } }),
+		formatting.prettier.with({
+			-- use prettier only with prettierrc present
+			condition = function()
+				return require("null-ls.utils").root_pattern(
+					".prettierrc",
+					".prettierrc.json",
+					".prettierrc.yml",
+					".prettierrc.yaml",
+					".prettierrc.json5",
+					".prettierrc.js",
+					".prettierrc.cjs",
+					".prettierrc.toml",
+					"prettier.config.js",
+					"prettier.config.cjs"
+				)(vim.api.nvim_buf_get_name(0)) ~= nil
+			end,
+		}),
+
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
+		require("none-ls.diagnostics.eslint_d"),
+		require("none-ls.formatting.eslint_d"),
+		require("none-ls-shellcheck.diagnostics"),
+		require("none-ls-luacheck.diagnostics.luacheck"),
 		-- formatting.rustfmt,
 		-- formatting.clang_format.with({ extra_args = { "-style={BasedOnStyle: llvm, IndentWidth: 4}" } }),
 		diagnostics.zsh,
