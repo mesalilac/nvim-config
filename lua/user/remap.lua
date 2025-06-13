@@ -92,7 +92,7 @@ nnoremap("<C-0>", "<Cmd>BufferLast<CR>", barbar_opts)
 -- Pin/unpin buffer
 nnoremap("<C-A-p>", "<Cmd>BufferPin<CR>", barbar_opts)
 -- Close buffer
-nnoremap("<C-w>", "<Cmd>bd<CR>", barbar_opts)
+nnoremap("<C-c>", "<Cmd>bdelete<CR>", barbar_opts)
 -- nnoremap("<C-w>", "<Cmd>BufferClose<CR>", barbar_opts)
 -- Wipeout buffer
 --                 :BufferWipeout
