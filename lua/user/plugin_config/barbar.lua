@@ -74,23 +74,25 @@ bufferline.setup({
 	no_name_title = nil,
 })
 
+-- NOTE: ERROR: module 'nvim-tree.view' not found:\n\tno field package.preload['nvim-tree.view']\n\tno
+--
 -- for nvimTree
 -- see: https://github.com/romgrk/barbar.nvim#integration-with-filetree-plugins
-local nvim_tree_events = require("nvim-tree.events")
-local bufferline_api = require("bufferline.api")
+-- local nvim_tree_events = require("nvim-tree.events")
+-- local bufferline_api = require("bufferline.api")
 
-local function get_tree_size()
-	return require("nvim-tree.view").View.width
-end
+-- local function get_tree_size()
+-- 	return require("nvim-tree.view").View.width
+-- end
 
-nvim_tree_events.subscribe("TreeOpen", function()
-	bufferline_api.set_offset(get_tree_size())
-end)
+-- nvim_tree_events.subscribe("TreeOpen", function()
+-- 	bufferline_api.set_offset(get_tree_size())
+-- end)
 
-nvim_tree_events.subscribe("Resize", function()
-	bufferline_api.set_offset(get_tree_size())
-end)
+-- nvim_tree_events.subscribe("Resize", function()
+-- 	bufferline_api.set_offset(get_tree_size())
+-- end)
 
-nvim_tree_events.subscribe("TreeClose", function()
-	bufferline_api.set_offset(0)
-end)
+-- nvim_tree_events.subscribe("TreeClose", function()
+-- 	bufferline_api.set_offset(0)
+-- end)

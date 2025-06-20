@@ -112,6 +112,8 @@ return packer.startup(function(use)
 		branch = "master",
 	})
 
+	use("rmagatti/alternate-toggler")
+
 	-- commentary.vim: comment stuff out
 	use("tpope/vim-commentary")
 

@@ -16,6 +16,8 @@ vim.keymap.set("n", "<leader>x", function()
 	end)
 end, { silent = true })
 
+nnoremap("<leader>ta", "<CMD>:ToggleAlternate<CR>", { noremap = true })
+
 nnoremap("<leader>cp", "<CMD>CccPick<CR>")
 
 -- Open current buff with xdg-open

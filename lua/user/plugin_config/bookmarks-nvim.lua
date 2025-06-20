@@ -7,7 +7,7 @@ vim.api.nvim_set_hl(0, "bookmarks_virt_text", { fg = "#E06C75" })
 
 bookmarks.setup({
 	keymap = {
-		toggle = "<tab><tab>", -- Toggle bookmarks
+		toggle = "\\o", -- Toggle bookmarks
 		add = "\\z", -- Add bookmarks
 		jump = "<CR>", -- Jump from bookmarks
 		delete = "dd", -- Delete bookmarks
