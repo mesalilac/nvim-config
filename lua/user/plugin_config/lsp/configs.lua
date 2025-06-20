@@ -22,6 +22,7 @@ local servers = {
 	"lemminx", -- XML
 	"yamlls", -- YAML
 	"dockerls", -- Docker
+	"hyprls",
 	-- "grammarly", -- Grammarly
 }
 
