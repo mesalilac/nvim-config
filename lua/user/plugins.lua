@@ -112,6 +112,8 @@ return packer.startup(function(use)
 		branch = "master",
 	})
 
+	use("ggandor/leap.nvim")
+
 	use("rmagatti/alternate-toggler")
 
 	-- commentary.vim: comment stuff out
