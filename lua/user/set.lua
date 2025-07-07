@@ -81,3 +81,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.lsp.buf.format({ async = false })
 	end,
 })
+
+-- disable diagnostic for .env file
+local dotenvgroup = vim.api.nvim_create_augroup("__env_diagnostics", { clear = true })
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = { ".env" },
+	group = dotenvgroup,
+	callback = function(args)
+		vim.diagnostic.disable(args.buf)
+	end,
+})
