@@ -10,49 +10,52 @@ local diagnostics = null_ls.builtins.diagnostics
 
 -- local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local function has_biome_config(utils)
-    return utils.root_has_file({ "biome.json", "biome.jsonc" })
-end
+local biome_files = {
+    "biome.json", "biome.jsonc"
+}
 
-local function has_prettirer_config(utils)
-    return utils.root_has_file({
-        ".prettierrc",
-        ".prettierrc.cjs",
-        ".prettierrc.js",
-        ".prettierrc.json",
-        "prettier.config.cjs",
-        "prettier.config.js",
-        "prettier.config.mjs",
-    })
-end
+local prettirer_files = {
+    ".prettierrc",
+    ".prettierrc.cjs",
+    ".prettierrc.js",
+    ".prettierrc.json",
+    "prettier.config.cjs",
+    "prettier.config.js",
+    "prettier.config.mjs",
+}
 
-local function has_eslint_config(utils)
-    return utils.root_has_file({
-        ".eslintrc",
-        ".eslintrc.cjs",
-        ".eslintrc.js",
-        ".eslintrc.json",
-        "eslint.config.cjs",
-        "eslint.config.js",
-        "eslint.config.mjs",
-    })
-end
+local eslint_files = {
+    ".eslintrc",
+    ".eslintrc.cjs",
+    ".eslintrc.js",
+    ".eslintrc.json",
+    "eslint.config.cjs",
+    "eslint.config.js",
+    "eslint.config.mjs",
+}
 
 local function eslint_condition(utils)
-    return has_eslint_config(utils) and not has_biome_config(utils)
+    return utils.root_has_file(eslint_files) and not utils.root_has_file(biome_files)
 end
 
 local function prettirer_condition(utils)
-    return has_prettirer_config(utils) and not has_biome_config(utils)
+    return utils.root_has_file(prettirer_files) and not utils.root_has_file(biome_files)
 end
 
 local function biome_condition(utils)
-    return has_biome_config(utils)
+    return not utils.root_has_file(prettirer_files)
 end
 
 null_ls.setup({
     debug = false,
     sources = {
+        formatting.biome.with({
+            args = {
+                "check", "--write", "--unsafe", "--formatter-enabled=true", "--assist-enabled=true",
+                "--stdin-file-path=$FILENAME"
+            },
+            condition = biome_condition
+        }),
         require("none-ls.diagnostics.eslint_d").with({ condition = eslint_condition }),
         diagnostics.stylelint,
         formatting.prettierd.with({
@@ -63,7 +66,7 @@ null_ls.setup({
         }),
         formatting.black.with({ extra_args = { "--fast" } }),
         formatting.stylua,
-        -- formatting.biome.with({ condition = biome_condition }),
+        -- find a way to do this through a biome nvim-lspconfig
         require("none-ls-shellcheck.diagnostics"),
         require("none-ls-luacheck.diagnostics.luacheck"),
         -- formatting.rustfmt,
