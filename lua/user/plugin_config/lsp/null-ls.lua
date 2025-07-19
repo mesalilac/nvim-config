@@ -11,7 +11,7 @@ local diagnostics = null_ls.builtins.diagnostics
 -- local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local function has_biome_config(utils)
-    return utils.root_has_file({ ".biome.json", ".biome.jsonc" })
+    return utils.root_has_file({ "biome.json", "biome.jsonc" })
 end
 
 local function has_prettirer_config(utils)
@@ -43,9 +43,11 @@ local function eslint_condition(utils)
 end
 
 local function prettirer_condition(utils)
-    return has_prettirer_config(utils) and not has_biome_config(utils) or
-        not has_prettirer_config(utils) and
-        not has_biome_config(utils) -- if no prettier config, no biome config, use prettier default
+    return has_prettirer_config(utils) and not has_biome_config(utils)
+end
+
+local function biome_condition(utils)
+    return has_biome_config(utils)
 end
 
 null_ls.setup({
@@ -61,6 +63,7 @@ null_ls.setup({
         }),
         formatting.black.with({ extra_args = { "--fast" } }),
         formatting.stylua,
+        -- formatting.biome.with({ condition = biome_condition }),
         require("none-ls-shellcheck.diagnostics"),
         require("none-ls-luacheck.diagnostics.luacheck"),
         -- formatting.rustfmt,

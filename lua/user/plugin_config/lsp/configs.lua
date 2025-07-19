@@ -10,6 +10,7 @@ local servers = {
     "pyright",       -- Python
     -- "tsserver", -- Typescript/Javascript (tsserver is deprecated)
     "ts_ls",         -- New ts server
+    "biome",
     "jsonls",        -- Json
     "html",          -- Html
     "lua_ls",        -- Lua
