@@ -4,12 +4,12 @@ if not status_ok then
 end
 
 local servers = {
-    "cssls",         -- Css
-    "gopls",         -- Golang
-    "clangd",        -- C++/C
-    "pyright",       -- Python
+    "cssls",   -- Css
+    "gopls",   -- Golang
+    "clangd",  -- C++/C
+    "pyright", -- Python
     -- "tsserver", -- Typescript/Javascript (tsserver is deprecated)
-    "ts_ls",         -- New ts server
+    -- "ts_ls",         -- New ts server (started through biome)
     "biome",
     "jsonls",        -- Json
     "html",          -- Html
