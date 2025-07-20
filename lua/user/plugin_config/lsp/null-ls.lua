@@ -51,7 +51,7 @@ null_ls.setup({
     sources = {
         formatting.biome.with({
             args = {
-                "check", "--write", "--unsafe", "--formatter-enabled=true", "--assist-enabled=true",
+                "check", "--write", "--formatter-enabled=true", "--assist-enabled=true",
                 "--stdin-file-path=$FILENAME"
             },
             condition = biome_condition
