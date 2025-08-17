@@ -32,7 +32,8 @@ local mason_lspconfig = require("mason-lspconfig")
 mason_lspconfig.setup({
     ensure_installed = servers,
     automatic_installation = true,
-    automatic_enable = true,
+    automatic_enable = false, -- Causes duplicated clients
+    automatic_setup = true,
     ui = {
         check_outdated_servers_on_open = true,
         icons = {
