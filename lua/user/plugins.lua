@@ -76,6 +76,7 @@ return packer.startup(function(use)
     -- Git integration for buffers
     use({
         "lewis6991/gitsigns.nvim",
+        tag = "v1.0.2"
     })
 
     -- Ultimate smart pairs written in lua!
