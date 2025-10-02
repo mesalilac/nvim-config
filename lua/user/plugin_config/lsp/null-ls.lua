@@ -64,7 +64,7 @@ null_ls.setup({
             },
             condition = prettirer_condition,
         }),
-        formatting.black.with({ extra_args = { "--fast" } }),
+        -- formatting.black.with({ extra_args = { "--fast" } }),
         formatting.stylua,
         -- find a way to do this through a biome nvim-lspconfig
         require("none-ls-shellcheck.diagnostics"),

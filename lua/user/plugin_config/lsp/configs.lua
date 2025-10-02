@@ -4,10 +4,10 @@ if not status_ok then
 end
 
 local servers = {
-    "cssls",   -- Css
-    "gopls",   -- Golang
-    "clangd",  -- C++/C
-    "pyright", -- Python
+    "cssls",  -- Css
+    "gopls",  -- Golang
+    "clangd", -- C++/C
+    "ruff",   -- Python linter and formatter
     -- "tsserver", -- Typescript/Javascript (tsserver is deprecated)
     -- "ts_ls",         -- New ts server (started through biome)
     "biome",
@@ -59,3 +59,5 @@ for _, server in pairs(servers) do
     end
     lspconfig[server].setup(opts)
 end
+
+vim.lsp.enable('ty')
