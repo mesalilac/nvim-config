@@ -7,7 +7,7 @@ o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
-o.conceallevel = 0 -- so that `` is visible in markdown files
+o.conceallevel = 0                              -- so that `` is visible in markdown files
 
 -- Enable blinking together with different cursor shapes for insert/command mode, and cursor highlighting:
 -- o.guicursor =
@@ -16,7 +16,7 @@ o.guicursor = "i:block"
 
 o.smartindent = true
 o.exrc = true
-o.nu = true -- Add line numbers
+o.nu = true             -- Add line numbers
 o.relativenumber = true -- Add relative line number
 o.guifont = "mononoki:h15"
 o.ignorecase = true
@@ -46,7 +46,7 @@ o.laststatus = 3
 -- o.foldexpr = "nvim_treesitter#foldexpr()"
 
 if vim.fn.has("termguicolors") then
-	o.termguicolors = true
+    o.termguicolors = true
 end
 
 -- Autocompletion
@@ -66,28 +66,43 @@ vim.opt.shortmess:append("c")
 
 -- remove trailing white space
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	pattern = { "*" },
-	command = [[%s/\s\+$//e]],
+    pattern = { "*" },
+    command = [[%s/\s\+$//e]],
 })
 
 -- Fix for autoformat not working with clangd
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 vim.api.nvim_clear_autocmds({ group = augroup })
 vim.api.nvim_create_autocmd("BufWritePre", {
-	group = augroup,
-	callback = function()
-		-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-		-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
-		vim.lsp.buf.format({ async = false })
-	end,
+    group = augroup,
+    callback = function()
+        -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+        -- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
+        vim.lsp.buf.format({ async = false })
+    end,
 })
 
 -- disable diagnostic for .env file
 local dotenvgroup = vim.api.nvim_create_augroup("__env_diagnostics", { clear = true })
 vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = { ".env" },
-	group = dotenvgroup,
-	callback = function(args)
-		vim.diagnostic.disable(args.buf)
-	end,
+    pattern = { ".env" },
+    group = dotenvgroup,
+    callback = function(args)
+        vim.diagnostic.disable(args.buf)
+    end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    callback = function()
+        -- Check if the current buffer's filetype is Python
+        if vim.bo.ft == "python" then
+            -- Request and apply code actions specifically for "source.fixAll.ruff"
+            vim.lsp.buf.code_action({
+                context = {
+                    only = { "source.fixAll.ruff" }
+                },
+                apply = true,
+            })
+        end
+    end,
 })
