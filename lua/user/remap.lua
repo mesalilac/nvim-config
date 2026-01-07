@@ -6,14 +6,14 @@ vim.keymap.set("n", "<leader>d", '"_dP')
 vim.keymap.set("v", "<leader>d", '"_dP')
 
 vim.keymap.set("n", "<leader>x", function()
-	local file = vim.api.nvim_buf_get_name(0)
+    local file = vim.api.nvim_buf_get_name(0)
 
-	vim.ui.input({ prompt = "Make '" .. file .. "' executable? (y/N) " }, function(input)
-		if input == "y" then
-			vim.cmd("silent! !chmod +x %")
-			print(file .. " is now executable!")
-		end
-	end)
+    vim.ui.input({ prompt = "Make '" .. file .. "' executable? (y/N) " }, function(input)
+        if input == "y" then
+            vim.cmd("silent! !chmod +x %")
+            print(file .. " is now executable!")
+        end
+    end)
 end, { silent = true })
 
 nnoremap("<leader>ta", "<CMD>:ToggleAlternate<CR>", { noremap = true })
@@ -94,8 +94,8 @@ nnoremap("<C-0>", "<Cmd>BufferLast<CR>", barbar_opts)
 -- Pin/unpin buffer
 nnoremap("<C-A-p>", "<Cmd>BufferPin<CR>", barbar_opts)
 -- Close buffer
-nnoremap("<C-c>", "<Cmd>bdelete<CR>", barbar_opts)
--- nnoremap("<C-w>", "<Cmd>BufferClose<CR>", barbar_opts)
+-- nnoremap("<C-c>", "<Cmd>bdelete!<CR>", barbar_opts)
+nnoremap("<C-c>", "<Cmd>BufferClose!<CR>", barbar_opts)
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
@@ -134,34 +134,34 @@ vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format{async=false}' ]])
 
 -- Jumping to context (upwards)
 vim.keymap.set("n", "[c", function()
-	require("treesitter-context").go_to_context()
+    require("treesitter-context").go_to_context()
 end, { silent = true })
 
 vim.keymap.set("n", "<leader>xx", function()
-	require("trouble").open()
+    require("trouble").open()
 end)
 vim.keymap.set("n", "<leader>xw", function()
-	require("trouble").open("workspace_diagnostics")
+    require("trouble").open("workspace_diagnostics")
 end)
 vim.keymap.set("n", "<leader>xd", function()
-	require("trouble").open("document_diagnostics")
+    require("trouble").open("document_diagnostics")
 end)
 vim.keymap.set("n", "<leader>xq", function()
-	require("trouble").open("quickfix")
+    require("trouble").open("quickfix")
 end)
 vim.keymap.set("n", "<leader>xl", function()
-	require("trouble").open("loclist")
+    require("trouble").open("loclist")
 end)
 
 vim.keymap.set("i", "<C-g>", function()
-	return vim.fn["codeium#Accept"]()
+    return vim.fn["codeium#Accept"]()
 end, { expr = true })
 vim.keymap.set("i", "<c-b>", function()
-	return vim.fn["codeium#CycleCompletions"](1)
+    return vim.fn["codeium#CycleCompletions"](1)
 end, { expr = true })
 vim.keymap.set("i", "<c-v>", function()
-	return vim.fn["codeium#CycleCompletions"](-1)
+    return vim.fn["codeium#CycleCompletions"](-1)
 end, { expr = true })
 vim.keymap.set("i", "<c-x>", function()
-	return vim.fn["codeium#Clear"]()
+    return vim.fn["codeium#Clear"]()
 end, { expr = true })
